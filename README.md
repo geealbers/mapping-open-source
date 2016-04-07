@@ -4,23 +4,23 @@ muse-tech-central
 A list of museums with github accounts. Forked from MuseCompNet/muse-tech-central. Add more github accounts as pull requests or by commenting in the issue tracker.
 
 ## Australia
-- ### [Museum Victoria](https://github.com/museumvictoria)
+- [Museum Victoria](https://github.com/museumvictoria)
 
 ## United States
-- ### [Carnegie Museum of Art](https://github.com/cmoa)
-- ### [Cooper Hewitt Smithsonian Design Museum](https://github.com/cooperhewitt)
-- ### [Indianapolis Museum of Art](https://github.com/IMAmuseum/)
-- ### [Maine Discovery Museum](https://github.com/mainehackerclub/MDM)
-- ### [Media Lab at the Metropolitan Museum of Art](https://github.com/metmuseum-medialab)
-- ### [Minneapolis Institute of Arts](https://github.com/artsmia)
-- ### [Museum of Life and Science](https://github.com/lifeandscience)
-- ### [Museum of Modern Art](https://github.com/MuseumofModernArt)
-- ### [The Museum of Modern Art (MoMA)](http://www.moma.org)
-- ### [Science Museum of Minnesota](https://github.com/scimusmn/)
-- ### [Walker Art Center](https://github.com/walkerart)
+- [Carnegie Museum of Art](https://github.com/cmoa)
+- [Cooper Hewitt Smithsonian Design Museum](https://github.com/cooperhewitt)
+- [Indianapolis Museum of Art](https://github.com/IMAmuseum/)
+- [Maine Discovery Museum](https://github.com/mainehackerclub/MDM)
+- [Media Lab at the Metropolitan Museum of Art](https://github.com/metmuseum-medialab)
+- [Minneapolis Institute of Arts](https://github.com/artsmia)
+- [Museum of Life and Science](https://github.com/lifeandscience)
+- [Museum of Modern Art](https://github.com/MuseumofModernArt)
+- [The Museum of Modern Art (MoMA)](http://www.moma.org)
+- [Science Museum of Minnesota](https://github.com/scimusmn/)
+- [Walker Art Center](https://github.com/walkerart)
 
 ## United Kingdom
-- ### [Victoria and Albert Museum](https://github.com/organizations/vanda)
+- [Victoria and Albert Museum](https://github.com/organizations/vanda)
 
 
 ## Projects

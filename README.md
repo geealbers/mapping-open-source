@@ -1,7 +1,7 @@
-muse-tech-central
+Museums on GitHub
 =================
 
-A list of museums with github accounts. Forked from MuseCompNet/muse-tech-central. Add more github accounts as pull requests or by commenting in the issue tracker.
+A list of museums with GitHub accounts. Forked from MuseCompNet/muse-tech-central. Add more github accounts as pull requests or by commenting in the issue tracker.
 
 ## Australia
 - [Museum Victoria](https://github.com/museumvictoria)

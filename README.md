@@ -24,6 +24,10 @@ A list of museums with github accounts. Forked from MuseCompNet/muse-tech-centra
 
 
 ## Projects
+
+- [Europeana](https://github.com/europeana)
+    - A digital library aggregating collections from Europe's libraries, archives, museums and audio-visual archives 
+
 - [Serendip-o-matic](https://github.com/chnm/serendipomatic/)
     - Source code for serendipitous discovery tool built at One Week ¦ One Tool open-source software-development institute that includes results from DPLA, Europeana (and now Trove). More national and topic aggregators would be ace!
 

@@ -10,6 +10,7 @@ A list of museums with GitHub accounts. Forked from MuseCompNet/muse-tech-centra
 ## United States
 - [Carnegie Museum of Art](https://github.com/cmoa)
 - [Cooper Hewitt Smithsonian Design Museum](https://github.com/cooperhewitt)
+- [Getty Publications](https://github.com/gettypubs)
 - [Indianapolis Museum of Art](https://github.com/IMAmuseum/)
 - [Maine Discovery Museum](https://github.com/mainehackerclub/MDM)
 - [Media Lab at the Metropolitan Museum of Art](https://github.com/metmuseum-medialab)

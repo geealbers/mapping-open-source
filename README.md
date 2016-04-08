@@ -3,7 +3,7 @@ Museums on GitHub
 
 A list of museums (and some archives as well) with GitHub accounts. Forked from MuseCompNet/muse-tech-central. Add more github accounts as pull requests or by commenting in the issue tracker.
 
-Museums are added into [Wikidata](https://www.wikidata.org/) as well. Here's the [list of all museums with github info on Wikidata](http://tinyurl.com/h8vragg).
+Museums are added into [Wikidata](https://www.wikidata.org/) as well (please help me out if you know your way around Wikidata). Here's the [list of all museums with github info on Wikidata](http://tinyurl.com/h8vragg).
 
 ## Australia
 - [Museum of Applied Arts and Sciences/Powerhouse Museum](https://github.com/museumofappliedartsandsciences)

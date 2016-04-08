@@ -3,11 +3,14 @@ Museums on GitHub
 
 A list of museums with GitHub accounts. Forked from MuseCompNet/muse-tech-central. Add more github accounts as pull requests or by commenting in the issue tracker.
 
+Museums are added into [Wikidata](https://www.wikidata.org/) as well. Here's the [list of all museums with github info on Wikidata](http://tinyurl.com/h8vragg).
+
 ## Australia
 - [Museum of Applied Arts and Sciences/Powerhouse Museum](https://github.com/museumofappliedartsandsciences)
 - [Museum Victoria](https://github.com/museumvictoria)
 
 ## United States
+- [American Art Collaborative (14 U.S. art museums)](https://github.com/american-art)
 - [Carnegie Museum of Art](https://github.com/cmoa)
 - [Cooper Hewitt Smithsonian Design Museum](https://github.com/cooperhewitt)
 - [Getty Publications](https://github.com/gettypubs)

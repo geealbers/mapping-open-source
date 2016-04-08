@@ -4,7 +4,7 @@ Museums on GitHub
 A list of museums with GitHub accounts. Forked from MuseCompNet/muse-tech-central. Add more github accounts as pull requests or by commenting in the issue tracker.
 
 ## Australia
-- [Museum of Applied Art and Science](https://github.com/museumofappliedartsandsciences)
+- [Museum of Applied Arts and Sciences/Powerhouse Museum](https://github.com/museumofappliedartsandsciences)
 - [Museum Victoria](https://github.com/museumvictoria)
 
 ## United States

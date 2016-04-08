@@ -20,8 +20,9 @@ Museums are added into [Wikidata](https://www.wikidata.org/) as well. Here's the
 - [Minneapolis Institute of Arts](https://github.com/artsmia)
 - [Museum of Life and Science](https://github.com/lifeandscience)
 - [Museum of Modern Art](https://github.com/MuseumofModernArt)
-- [The Museum of Modern Art (MoMA)](http://www.moma.org)
+- [The Museum of Modern Art (MoMA)](https://github.com/MuseumofModernArt)
 - [Science Museum of Minnesota](https://github.com/scimusmn/)
+- [Smithsonian Institution](https://github.com/smithsonian/)
 - [Walker Art Center](https://github.com/walkerart)
 
 ## United Kingdom

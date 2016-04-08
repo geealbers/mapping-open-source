@@ -1,7 +1,7 @@
 Museums on GitHub
 =================
 
-A list of museums with GitHub accounts. Forked from MuseCompNet/muse-tech-central. Add more github accounts as pull requests or by commenting in the issue tracker.
+A list of museums (and some archives as well) with GitHub accounts. Forked from MuseCompNet/muse-tech-central. Add more github accounts as pull requests or by commenting in the issue tracker.
 
 Museums are added into [Wikidata](https://www.wikidata.org/) as well. Here's the [list of all museums with github info on Wikidata](http://tinyurl.com/h8vragg).
 
@@ -23,6 +23,7 @@ Museums are added into [Wikidata](https://www.wikidata.org/) as well. Here's the
 - [The Museum of Modern Art (MoMA)](https://github.com/MuseumofModernArt)
 - [Science Museum of Minnesota](https://github.com/scimusmn/)
 - [Smithsonian Institution](https://github.com/smithsonian/)
+- [U.S. National Archives](https://github.com/usnationalarchives)
 - [Walker Art Center](https://github.com/walkerart)
 
 ## United Kingdom

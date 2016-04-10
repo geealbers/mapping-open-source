@@ -22,6 +22,7 @@ A list of museums with GitHub accounts. Forked from MuseCompNet/muse-tech-centra
 - [Walker Art Center](https://github.com/walkerart)
 
 ## United Kingdom
+- [Tate](https://github.com/tategallery)
 - [Victoria and Albert Museum](https://github.com/organizations/vanda)
 
 

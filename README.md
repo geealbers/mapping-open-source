@@ -75,6 +75,7 @@ Museums are added into [Wikidata](https://www.wikidata.org/) as well (please hel
 - [Whitney Museum of American Art](https://github.com/whitneymuseum)
 
 ## United Kingdom
+- [British Museum](https://github.com/BritishMuseum)
 - [Natural History Museum](https://github.com/NaturalHistoryMuseum)
 - [Tate](https://github.com/tategallery)
 - [Victoria and Albert Museum](https://github.com/organizations/vanda)

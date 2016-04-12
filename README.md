@@ -29,6 +29,9 @@ Museums are added into [Wikidata](https://www.wikidata.org/) as well (please hel
 ## New Zealand
 - [Auckland War Memorial Museum](https://github.com/AucklandMuseum)
 
+## Slovakia
+- [Slovak National Gallery](https://github.com/SlovakNationalGallery)
+
 ## Sweden
 - [Kalmar läns museum](https://github.com/kalmarlansmuseum)
 

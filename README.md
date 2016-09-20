@@ -34,6 +34,7 @@ Museums are added into [Wikidata](https://www.wikidata.org/) as well (please hel
 
 ## Sweden
 - [Kalmar läns museum](https://github.com/kalmarlansmuseum)
+- [Nationalmuseum](https://github.com/NationalmuseumSWE)
 - [Statens maritima museer (National Maritime Museums in Sweden)](https://github.com/Statens-maritima-museer)
 
 ## United States

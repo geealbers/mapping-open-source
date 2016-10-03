@@ -34,7 +34,7 @@ Museums are added into [Wikidata](https://www.wikidata.org/) as well (please hel
 
 ## Sweden
 - [Kalmar läns museum](https://github.com/kalmarlansmuseum)
-- [Livrustkammaren, Skoklosters slott med stiftelsen Hallwylska museet](https://github.com/lshSWE)
+- [Livrustkammaren och Skoklosters slott med stiftelsen Hallwylska museet](https://github.com/lshSWE)
 - [Nationalmuseum](https://github.com/NationalmuseumSWE)
 - [Statens maritima museer (National Maritime Museums in Sweden)](https://github.com/Statens-maritima-museer)
 

@@ -19,6 +19,7 @@ Museums are added into [Wikidata](https://www.wikidata.org/) as well (please hel
 
 ## Germany
 - [Museum für Naturkunde Berlin](https://github.com/MfN-Berlin)
+- [Museum für Kunst und Gewerbe Hamburg](https://github.com/MKGHamburg)
 
 ## Hungary
 - [Hungarian Jewish Museum and Archives](https://github.com/MILEVMUS)

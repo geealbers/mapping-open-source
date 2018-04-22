@@ -12,6 +12,7 @@ Museums are added into [Wikidata](https://www.wikidata.org/) as well (please hel
 
 ## Canada
 - [University of Alberta Museum of Zoology (UAMZ)](https://github.com/uamz-vertnet)
+- [Canadian Museum for Human Rights](https://github.com/humanrights)
 
 ## Denmark
 - [National Museum of Denmark](https://github.com/NationalMuseumofDenmark)

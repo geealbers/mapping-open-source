@@ -83,6 +83,7 @@ Museums are added into [Wikidata](https://www.wikidata.org/) as well (please hel
 - [Walker Art Center](https://github.com/walkerart)
 - [Walters Art Museum](https://github.com/WaltersArtMuseum)
 - [Whitney Museum of American Art](https://github.com/whitneymuseum)
+- [Williams College Museum of Art](https://github.com/wcmaart)
 
 ## United Kingdom
 - [British Museum](https://github.com/BritishMuseum)

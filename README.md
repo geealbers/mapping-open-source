@@ -53,6 +53,7 @@ Museums are added into [Wikidata](https://www.wikidata.org/) as well (please hel
 - [Children's Museum of Houston](https://github.com/cmhouston)
 - [Children's Museum of Pittsburgh](https://github.com/pittsburghkids)
 - [Chinese American Museum](https://github.com/camla)
+- [Cleveland Museum of Art](https://github.com/ClevelandMuseumArt)
 - [Clyfford Still Museum](https://github.com/stillmuseum)
 - [Colby College Museum of Art](https://github.com/ColbyMuseum)
 - [Colorado Plateau Museum of Arthropod Biodiversity](https://github.com/cpmab)

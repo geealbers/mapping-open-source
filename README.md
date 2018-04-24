@@ -43,6 +43,7 @@ Museums are added into [Wikidata](https://www.wikidata.org/) as well (please hel
 - [Livrustkammaren och Skoklosters slott med stiftelsen Hallwylska museet](https://github.com/lshSWE)
 - [Nationalmuseum](https://github.com/NationalmuseumSWE)
 - [Nordiska museet (Nordic Museum)](https://github.com/NordicMuseum)
+- [Riksantikvarieämbetet (Swedish National Heritage Board](https://github.com/riksantikvarieambetet)
 - [Statens maritima museer (National Maritime Museums in Sweden)](https://github.com/Statens-maritima-museer)
 
 ## United States

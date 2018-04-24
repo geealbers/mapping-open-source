@@ -32,6 +32,7 @@ Museums are added into [Wikidata](https://www.wikidata.org/) as well (please hel
 - [Auckland War Memorial Museum](https://github.com/AucklandMuseum)
 
 ## Norway
+- [Kultur- og Naturreise (a project of the Arts Council Norway)](https://github.com/knreise/)
 - [Nasjonalmuseet](https://github.com/nasjonalmuseet)
 
 ## Slovakia

@@ -7,7 +7,7 @@ Museums are added into [Wikidata](https://www.wikidata.org/) as well (please hel
 
 ## Australia
 - [Museum of Applied Arts and Sciences/Powerhouse Museum](https://github.com/museumofappliedartsandsciences)
-- [Museum Victoria](https://github.com/museumvictoria)
+- [Museums Victoria](https://github.com/museumsvictoria)
 - [Western Australian Museum](https://github.com/wamuseum)
 
 ## Canada

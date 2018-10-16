@@ -5,14 +5,16 @@ A list of museums (and some archives as well) with GitHub accounts. Forked from 
 
 Museums are added into [Wikidata](https://www.wikidata.org/) as well (please help me out if you know your way around Wikidata). Here's the [list of all museums with github info on Wikidata](http://tinyurl.com/h8vragg).
 
+\* *Denotes that the museum is set up as a GitHub individual user rather than as an organization.*
+
 ## Australia
 - [Australian Centre for the Moving Image](https://github.com/ACMILabs)
-- [Museum of Applied Arts and Sciences/Powerhouse Museum](https://github.com/museumofappliedartsandsciences)
+- [Museum of Applied Arts and Sciences/Powerhouse Museum](https://github.com/museumofappliedartsandsciences)*
 - [Museum of Contemporary Art Australia](https://github.com/MuseumOfContemporaryArtAUSTRALIA)
 - [Museum of Old and New Art](https://github.com/museumofoldandnewart)
 - [Museums Victoria](https://github.com/museumsvictoria)
 - [National Gallery of Australia](https://github.com/nationalgalleryofaustralia)
-- [National Gallery of Victoria](https://github.com/ngv)
+- [National Gallery of Victoria](https://github.com/ngv)*
 - [National Museum of Australia](https://github.com/NationalMuseumAustralia)
 - [Royal Botanic Gardens Victoria](https://github.com/rbgvictoria)
 - [Western Australian Museum](https://github.com/wamuseum)
@@ -38,7 +40,7 @@ Museums are added into [Wikidata](https://www.wikidata.org/) as well (please hel
 - [M+](https://github.com/mplusmuseum)
 
 ## Hungary
-- [Hungarian Jewish Museum and Archives](https://github.com/MILEVMUS)
+- [Hungarian Jewish Museum and Archives](https://github.com/MILEVMUS)*
 
 ## Israel
 - [The Museum of the Jewish People](https://github.com/Beit-Hatfutsot)
@@ -58,7 +60,7 @@ Museums are added into [Wikidata](https://www.wikidata.org/) as well (please hel
 - [Slovak National Gallery](https://github.com/SlovakNationalGallery)
 
 ## Sweden
-- [Kalmar läns museum](https://github.com/kalmarlansmuseum)
+- [Kalmar läns museum](https://github.com/kalmarlansmuseum)*
 - [Livrustkammaren och Skoklosters slott med stiftelsen Hallwylska museet](https://github.com/lshSWE)
 - [Nationalmuseum](https://github.com/NationalmuseumSWE)
 - [Nordiska museet (Nordic Museum)](https://github.com/NordicMuseum)
@@ -78,7 +80,7 @@ Museums are added into [Wikidata](https://www.wikidata.org/) as well (please hel
 - [The Barnes Foundation](https://github.com/barnesfoundation)
 - [Berkeley Natural History Museum Consortium](https://github.com/BNHM)
 - [Birmingham Museum of Art](https://github.com/artsbma)
-- [Blanton Museum of Art](https://github.com/blanton-museum)
+- [Blanton Museum of Art](https://github.com/blanton-museum)*
 - [Brooklyn Museum](https://github.com/brooklynmuseum)
 - [Buffalo Museum of Science](https://github.com/bsns-feedback)
 - [Carnegie Museum of Art](https://github.com/cmoa)
@@ -107,7 +109,7 @@ Museums are added into [Wikidata](https://www.wikidata.org/) as well (please hel
 - [Historic New England](https://github.com/HistoricNE)
 - [Institute of Contemporary Art, Miami](https://github.com/icamiami)
 - [J. Paul Getty Trust](https://github.com/thegetty/)
-- [The Jewish Museum](https://github.com/thejewishmuseum)
+- [The Jewish Museum](https://github.com/thejewishmuseum)*
 - [Long Beach Museum of Art](https://github.com/lbmaorg)
 - [Lower East Side Tenement Museum](https://github.com/tenementmuseum/)
 - [Los Angeles County Museum of Art (LACMA)](https://github.com/LACMA)
@@ -127,8 +129,8 @@ Museums are added into [Wikidata](https://www.wikidata.org/) as well (please hel
 - [Museum of Science, Boston](https://github.com/mosboston)
 - [Museum of Vertebrate Zoology](https://github.com/museum-of-vertebrate-zoology)
 - [National Gallery of Art](https://github.com/NationalGalleryOfArt)
-- [National Veterans Art Museum](https://github.com/nationalveteransartmuseum)
-- [New York State Museum](https://github.com/NYSMuseum)
+- [National Veterans Art Museum](https://github.com/nationalveteransartmuseum)*
+- [New York State Museum](https://github.com/NYSMuseum)*
 - [Newfields Lab (formerly Indianapolis Museum of Art Lab](https://github.com/IMAmuseum/)
 - [Perot Museum of Nature and Science](https://github.com/pmns)
 - [Philadelphia Museum of Art](https://github.com/philamuseum)
@@ -140,7 +142,7 @@ Museums are added into [Wikidata](https://www.wikidata.org/) as well (please hel
 - [Science Museum of Minnesota](https://github.com/scimusmn/)
 - [Shedd Aquarium](https://github.com/SheddAquarium)
 - [Smithsonian Institution](https://github.com/smithsonian/)
-- [Smithsonian National Museum of African American History and Culture (NMAAHC)](https://github.com/NMAAHC)
+- [Smithsonian National Museum of African American History and Culture (NMAAHC)](https://github.com/NMAAHC)*
 - [Solomon R. Guggenheim Museum](https://github.com/Guggenheim)
 - [The Studio at Carnegie Museums of Pittsburgh](https://github.com/CMP-Studio)
 - [U.S. National Archives](https://github.com/usnationalarchives)
@@ -156,10 +158,9 @@ Museums are added into [Wikidata](https://www.wikidata.org/) as well (please hel
 - [Natural History Museum](https://github.com/NaturalHistoryMuseum)
 - [Royal Botanic Gardens, Kew](https://github.com/RBGKew)
 - [The Science Museum](https://github.com/thesciencemuseum)
-- [Tate](https://github.com/tategallery)
+- [Tate](https://github.com/tategallery)*
 - [Victoria and Albert Museum](https://github.com/vanda)
 - [Wellcome Collection and Library](https://github.com/wellcometrust)
-
 
 ## Projects
 

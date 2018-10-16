@@ -1,0 +1,109 @@
+/* Base */
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Page Banner */
+
+header {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 20px;
+  z-index: 5000;
+  width: 200px;
+  border: 4px solid #555;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+header h1 {
+  font-family: serif;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+header dl {
+  margin-top: 10px;
+}
+
+header dt {
+  float: left;
+}
+
+header dd {
+  margin-left: 20px;
+}
+
+header button {
+  margin-bottom: 10px;
+}
+
+header .note {
+  display: block;
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* Network Graph */
+
+g {
+  font-size: 4px;
+}
+
+g line {
+  stroke: #aaa;
+  stroke-opacity: .2;
+  stroke-width: 1;
+}
+
+g line.fork-edge {
+  stroke: red;
+  stroke-opacity: 1;
+}
+
+g.contributor circle {
+  fill: #8addea;
+}
+
+g.organization circle {
+  fill: red;
+}
+
+g circle.highlighted,
+g line.highlighted {
+  stroke: yellow;
+  stroke-width: 1;
+  stroke-opacity: 1;
+}
+
+g.contributor text {
+  fill: #555;
+}
+
+g.organization text {
+  fill: red;
+}
+
+g.contributor .node-hover-label {
+  display: none;
+  cursor: pointer;
+}
+
+g.contributor:hover .node-hover-label {
+  display: block;
+}
+
+/* Hide nodes and edges that only have one connection
+
+g circle.single,
+g circle.single + a,
+g line.single {
+  display: none;
+}
+ */

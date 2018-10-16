@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mapping Open Source in Museums: Network Graph</title>
+    <link rel="stylesheet" href="../css/mapping.css">
+  </head>
+  <body>
+    
+<header class="controls">
+  <h1>Mapping Open Source in Museums</h1><dl>
+  <dt><svg height="12" width="12"><circle cx="6" cy="6" r="6" fill="red" /></svg></dt><dd><span id="number-of-organizations"></span> organizations</dd>
+  <dt><svg height="12" width="12"><circle cx="6" cy="6" r="6" fill="#8addea" /></svg></dt><dd><span id="number-of-contributors"></span> contributors</dd>
+  <dt><svg height="12" width="12"><line x1="0" y1="11" x2="12" y2="1" style="stroke:#aaa;stroke-width:1" /></svg></dt><dd><span id="number-of-contributions"></span> contributions</dd>
+  <dt><svg height="12" width="12"><line x1="0" y1="11" x2="12" y2="1" style="stroke:red;stroke-width:1" /></svg></dt><dd><span id="number-of-forks"></span> forks</dd>
+</dl>
+<div>
+  
+  <input type="text" id="username" onclick="prepInput();" value="GitHub username ...">
+  <button onclick="scrollToUser()">Go</button>
+  <span class="note" id="username-warning"></span>
+</div>
+<button id="zoom-in" onclick="zoomIn('+')">+</button>
+<button id="zoom-out" onclick="zoomOut('-')">-</button></header>
+<div id="graph-container">
+  <script src="../js/d3.min.js" charset="utf-8"></script>
+  <script src="../js/network.js" charset="utf-8"></script>
+</div>
+
+  </body>
+</html>

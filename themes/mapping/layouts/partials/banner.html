@@ -1,0 +1,6 @@
+<header class="controls">
+  <h1>{{ .Site.Title }}</h1>
+  {{- if eq .Page.Params.layout "network" -}}
+  {{ partial "banner-insert-network.html" . }}
+  {{- end -}}
+</header>

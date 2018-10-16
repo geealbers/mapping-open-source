@@ -1,0 +1,14 @@
+# Hugo configuration file
+# https://gohugo.io/
+
+title: "Mapping Open Source in Museums"
+languageCode: "en-us"
+baseURL: ""
+canonifyURLs: true
+relativeURLs: false
+theme: "mapping"
+disableKinds:
+  - "sitemap"
+  - "taxonomy"
+  - "taxonomyTerm"
+metaDataFormat: "yaml"

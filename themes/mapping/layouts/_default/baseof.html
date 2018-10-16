@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ .Site.Title }}{{ with .Page.Title }}: {{ . }}{{ end }}</title>
+    <link rel="stylesheet" href="../css/mapping.css">
+  </head>
+  <body>
+    {{ block "main" . }}
+    {{ end }}
+  </body>
+</html>

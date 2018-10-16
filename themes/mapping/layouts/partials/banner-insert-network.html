@@ -1,0 +1,14 @@
+<dl>
+  <dt><svg height="12" width="12"><circle cx="6" cy="6" r="6" fill="red" /></svg></dt><dd><span id="number-of-organizations"></span> organizations</dd>
+  <dt><svg height="12" width="12"><circle cx="6" cy="6" r="6" fill="#8addea" /></svg></dt><dd><span id="number-of-contributors"></span> contributors</dd>
+  <dt><svg height="12" width="12"><line x1="0" y1="11" x2="12" y2="1" style="stroke:#aaa;stroke-width:1" /></svg></dt><dd><span id="number-of-contributions"></span> contributions</dd>
+  <dt><svg height="12" width="12"><line x1="0" y1="11" x2="12" y2="1" style="stroke:red;stroke-width:1" /></svg></dt><dd><span id="number-of-forks"></span> forks</dd>
+</dl>
+<div>
+  <!-- <input type="text" id="username" onClick="this.select();" value="GitHub username ..."> -->
+  <input type="text" id="username" onclick="prepInput();" value="GitHub username ...">
+  <button onclick="scrollToUser()">Go</button>
+  <span class="note" id="username-warning"></span>
+</div>
+<button id="zoom-in" onclick="zoomIn('+')">+</button>
+<button id="zoom-out" onclick="zoomOut('-')">-</button>

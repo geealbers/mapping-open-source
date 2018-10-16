@@ -45,6 +45,7 @@ Museums are added into [Wikidata](https://www.wikidata.org/) as well (please hel
 
 ## New Zealand
 - [Auckland War Memorial Museum](https://github.com/AucklandMuseum)
+- [Museum of New Zealand Te Papa Tongarewa](https://github.com/te-papa/)
 
 ## Norway
 - [Kultur- og Naturreise (a project of the Arts Council Norway)](https://github.com/knreise/)
@@ -148,13 +149,16 @@ Museums are added into [Wikidata](https://www.wikidata.org/) as well (please hel
 - [Walters Art Museum](https://github.com/WaltersArtMuseum)
 - [Whitney Museum of American Art](https://github.com/whitneymuseum)
 - [Williams College Museum of Art](https://github.com/wcmaart)
+- [Yale Center for British Art](https://github.com/ycba-cia)
 
 ## United Kingdom
 - [British Museum](https://github.com/BritishMuseum)
 - [Natural History Museum](https://github.com/NaturalHistoryMuseum)
 - [Royal Botanic Gardens, Kew](https://github.com/RBGKew)
+- [The Science Museum](https://github.com/thesciencemuseum)
 - [Tate](https://github.com/tategallery)
 - [Victoria and Albert Museum](https://github.com/vanda)
+- [Wellcome Collection and Library](https://github.com/wellcometrust)
 
 
 ## Projects

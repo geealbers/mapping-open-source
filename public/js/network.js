@@ -228,6 +228,8 @@ function zoomIn(n) {
   var currentScale = checkScale();
   var windowCenterX = window.innerWidth * .5;
   var windowCenterY = window.innerHeight * .5;
+  var currentX = window.scrollX;
+  var currentY = window.scrollY;
 
   // if a number is fed in, zoom to that level
   // otherwise increment
@@ -246,8 +248,6 @@ function zoomIn(n) {
 
   // calculate position to scroll to after scaling graph
   // in order to keep the same view centered
-  var currentX = window.scrollX;
-  var currentY = window.scrollY;
   var newX = ((((currentX + windowCenterX) / currentScale) * newScale) - windowCenterX);
   var newY = ((((currentY + windowCenterY) / currentScale) * newScale) - windowCenterY);
   window.scrollTo(newX, newY);
@@ -258,6 +258,8 @@ function zoomOut(n) {
   var currentScale = checkScale();
   var windowCenterX = window.innerWidth * .5;
   var windowCenterY = window.innerHeight * .5;
+  var currentX = window.scrollX;
+  var currentY = window.scrollY;
 
   // if a number is fed in, zoom to that level
   // otherwise increment
@@ -276,8 +278,6 @@ function zoomOut(n) {
 
   // calculate position to scroll to after scaling graph
   // in order to keep the same view centered
-  var currentX = window.scrollX;
-  var currentY = window.scrollY;
   var newX = ((((currentX + windowCenterX) / currentScale) * newScale) - windowCenterX);
   var newY = ((((currentY + windowCenterY) / currentScale) * newScale) - windowCenterY);
   window.scrollTo(newX, newY);

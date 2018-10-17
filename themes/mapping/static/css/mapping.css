@@ -53,6 +53,10 @@ header button {
   min-width: 28px;
 }
 
+header input [type="checkbox"] {
+  margin-right: 6px;
+}
+
 /* Network Graph */
 
 g {
@@ -102,11 +106,10 @@ g.contributor:hover .node-hover-label {
   display: block;
 }
 
-/* Hide nodes and edges that only have one connection
+/* hide nodes and edges that only have one connection */
 
-g circle.single,
-g circle.single + a,
-g line.single {
+g circle.single.hidden,
+g circle.single.hidden + a,
+g line.single.hidden {
   display: none;
 }
- */

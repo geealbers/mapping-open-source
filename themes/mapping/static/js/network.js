@@ -187,6 +187,21 @@ setTimeout(function() {
 }, 1000);
 
 
+function toggleSingle() {
+  console.log("toggled");
+  var singles = document.querySelectorAll(".single");
+  var singlesLength = singles.length;
+  if (document.getElementById("toggle-single").checked) {
+    for (var i = 0; i < singlesLength; i++) {
+      singles[i].classList.add("hidden");
+    };
+  } else {
+    for (var i = 0; i < singlesLength; i++) {
+      singles[i].classList.remove("hidden");
+    };
+  }
+}
+
 // set variables for page navigation controls: find & zoom
 var graph = document.getElementById("network-graph");
 var g = graph.getElementsByTagName("g")[0];
@@ -327,12 +342,14 @@ function scrollToUser() {
     // get user's node and highlight it
     var nodeCircle = node.getElementsByTagName("circle")[0];
     nodeCircle.classList.add("highlighted");
+    nodeCircle.classList.remove("hidden");
 
     // get user's edgelines and highlight them
     var edgeLines = document.querySelectorAll("[data-target='" + userName + "'], [data-source='" + userName + "']");
     var linesLength = edgeLines.length;
     for (var i = 0; i < linesLength; i++) {
       edgeLines[i].classList.add("highlighted");
+      edgeLines[i].classList.remove("hidden");
     };
 
     // set scale and scroll window to node position
@@ -349,7 +366,6 @@ function scrollToUser() {
       behavior: "smooth"
     })
 
-  // if the username is NOT in the graph ...
   }
 }
 

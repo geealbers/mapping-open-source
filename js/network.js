@@ -284,26 +284,45 @@ function zoomOut(n) {
   checkMargin(newScale);
 }
 
+
+var selector = new Selectr("#username", {
+  defaultSelected: false,
+  clearable: true,
+  placeholder: "GitHub username ...",
+});
+
+selector.on('selectr.clear', function() {
+  clearHighlights();
+});
+
+function clearHighlights() {
+  var previous = document.querySelectorAll(".highlighted");
+  if (previous) {
+    var previousLength = previous.length;
+    for (var i = 0; i < previousLength; i++) {
+      previous[i].classList.remove("highlighted");
+    };
+  };
+}
+
 // based on user input, find a user or organization node,
 // highlight it, scroll to it so it’s centered in the window
 // and zoom to scale level 3.
 function scrollToUser() {
 
   // get entered username
-  var userName = document.getElementById("username").value;
+  var select = document.getElementById("username");
+  var selection = select.options[select.selectedIndex];
+  if ( selection ) {
+    var userName = selection.text;
+  }
   var node = document.getElementById(userName);
 
   // if the username is in the graph ...
   if (node) {
 
     // check for previously highlighted lines and nodes and unhighlight
-    var previous = document.querySelectorAll(".highlighted");
-    if (previous) {
-      var previousLength = previous.length;
-      for (var i = 0; i < previousLength; i++) {
-        previous[i].classList.remove("highlighted");
-      };
-    };
+    clearHighlights();
 
     // get user's node and highlight it
     var nodeCircle = node.getElementsByTagName("circle")[0];
@@ -328,15 +347,10 @@ function scrollToUser() {
       top: ((circleY * scale) - windowCenterY),
       left: ((circleX * scale) - windowCenterX),
       behavior: "smooth"
-    });
+    })
 
   // if the username is NOT in the graph ...
-  } else {
-
-    // alert user and reset field for new entry
-    document.getElementById("username").value = "GitHub username ...";
-    document.getElementById("username-warning").innerHTML = "Sorry, there’s no user or organization with that name in the graph";
-  };
+  }
 }
 
 // select input placeholder text and clear alert if any

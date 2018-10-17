@@ -97,15 +97,6 @@ g.organization text {
   fill: red;
 }
 
-g.contributor .node-hover-label {
-  display: none;
-  cursor: pointer;
-}
-
-g.contributor:hover .node-hover-label {
-  display: block;
-}
-
 /* hide nodes and edges that only have one connection */
 
 g circle.single.hidden,

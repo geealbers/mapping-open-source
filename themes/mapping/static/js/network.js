@@ -170,22 +170,68 @@ d3.json("../network.json", function(error, dataset) {
     .attr("x", function(d) { return d.x })
     .attr("y", function(d) { return d.y; });
 
-  // add number of contributions to appear on hover
-  node.append("text")
-    .attr("class", "node-hover-label")
-    .text(function(d) {
-      return d.contributions
-    })
-    .attr("text-anchor", "middle")
-    .attr("x", function(d) { return d.x })
-    .attr("y", function(d) { return d.y; });
 });
 
-// wait enough time for SVG to be created and scroll to center point
+// wait enough time for SVG to be created and ...
 setTimeout(function() {
+
+  // scroll to center point
   window.scrollTo(((w * .5) - (window.innerWidth * .5)), ((h * .5) - (window.innerHeight * .5)));
+
+  // add event listeners to all node circles for highlighting on mousedown
+  var nodeMarkers = document.querySelectorAll(".node-marker");
+  var markersLength = nodeMarkers.length;
+  for (var i = 0; i < markersLength; i++) {
+    nodeMarkers[i].addEventListener("mousedown", addHighlights);
+    // add attribute to make it easier to find this element later
+    nodeMarkers[i].setAttribute("data-listener", "addHighlights");
+  };
+
 }, 1000);
 
+function addHighlights(c) {
+
+  clearHighlights();
+  var circle;
+  if ( c.currentTarget ) {
+    var circle = c.currentTarget;
+  } else {
+    var circle = c;
+  };
+
+  // get user's node and highlight it
+  circle.classList.add("highlighted");
+  circle.classList.remove("hidden");
+
+  // get user's edgelines and highlight them
+  var userName = circle.closest("g").id;
+  var edgeLines = document.querySelectorAll("[data-target='" + userName + "'], [data-source='" + userName + "']");
+  var linesLength = edgeLines.length;
+  for (var i = 0; i < linesLength; i++) {
+    edgeLines[i].classList.add("highlighted");
+    edgeLines[i].classList.remove("hidden");
+  }
+  // swap event listenter and data attributes to
+  // prepare to clear highlights on next mousedown
+  circle.removeEventListener("mousedown", addHighlights);
+  circle.addEventListener("mousedown", clearHighlights);
+  circle.setAttribute("data-listener", "clearHighlights");
+}
+
+function clearHighlights() {
+  var previous = document.querySelectorAll(".highlighted");
+  if (previous) {
+    var previousLength = previous.length;
+    for (var i = 0; i < previousLength; i++) {
+      previous[i].classList.remove("highlighted");
+      state = previous[i].getAttribute("data-listener");
+      if (state == "clearHighlights") {
+        previous[i].removeEventListener("mousedown", clearHighlights);
+        previous[i].addEventListener("mousedown", addHighlights);
+      }
+    };
+  };
+}
 
 function toggleSingle() {
   console.log("toggled");
@@ -310,16 +356,6 @@ selector.on('selectr.clear', function() {
   clearHighlights();
 });
 
-function clearHighlights() {
-  var previous = document.querySelectorAll(".highlighted");
-  if (previous) {
-    var previousLength = previous.length;
-    for (var i = 0; i < previousLength; i++) {
-      previous[i].classList.remove("highlighted");
-    };
-  };
-}
-
 // based on user input, find a user or organization node,
 // highlight it, scroll to it so it’s centered in the window
 // and zoom to scale level 3.
@@ -339,18 +375,9 @@ function scrollToUser() {
     // check for previously highlighted lines and nodes and unhighlight
     clearHighlights();
 
-    // get user's node and highlight it
+    // highlight user’s node and edges
     var nodeCircle = node.getElementsByTagName("circle")[0];
-    nodeCircle.classList.add("highlighted");
-    nodeCircle.classList.remove("hidden");
-
-    // get user's edgelines and highlight them
-    var edgeLines = document.querySelectorAll("[data-target='" + userName + "'], [data-source='" + userName + "']");
-    var linesLength = edgeLines.length;
-    for (var i = 0; i < linesLength; i++) {
-      edgeLines[i].classList.add("highlighted");
-      edgeLines[i].classList.remove("hidden");
-    };
+    addHighlights(nodeCircle);
 
     // set scale and scroll window to node position
     var scale = 3;

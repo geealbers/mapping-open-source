@@ -8,6 +8,7 @@
   </head>
   <body>
     
+<div id="loading"><h1>Loading ...</h1></div>
 <header class="controls">
   <h1>Mapping Open Source in Museums</h1><dl>
   <dt><svg height="12" width="12"><circle cx="6" cy="6" r="6" fill="red" /></svg></dt><dd><span id="number-of-organizations"></span> organizations</dd>
@@ -21,7 +22,8 @@
   </select>
 </div>
 <button id="zoom-in" onclick="zoomIn('+')">+</button>
-<button id="zoom-out" onclick="zoomOut('-')">-</button></header>
+<button id="zoom-out" onclick="zoomOut('-')">-</button>
+<div><input type="checkbox" id="toggle-single" onclick="toggleSingle()"> Show only contributors with multiple connections</div></header>
 <div id="graph-container">
   <script src="../js/d3.min.js" charset="utf-8"></script>
   <script src="../js/selectr.min.js" charset="utf-8"></script>

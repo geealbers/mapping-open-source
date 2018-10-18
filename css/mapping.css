@@ -7,6 +7,17 @@ body {
   line-height: 1.5;
 }
 
+h1 {
+  font-family: serif;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
 /* Page Banner */
 
 header {
@@ -14,19 +25,19 @@ header {
   top: 20px;
   left: 20px;
   padding: 20px;
-  z-index: 5000;
+  z-index: 10;
   width: 200px;
   border: 4px solid #555;
   border-radius: 6px;
   background-color: #fff;
 }
 
-header h1 {
+/* header h1 {
   font-family: serif;
   font-size: 2rem;
   line-height: 1.2;
   margin: 0;
-}
+} */
 
 header dl {
   margin-top: 10px;
@@ -51,9 +62,31 @@ header button {
   border: 1px solid #999;
   border-radius: 3px;
   min-width: 28px;
+  background-color: #fff;
+}
+
+header input [type="checkbox"] {
+  margin-right: 6px;
 }
 
 /* Network Graph */
+
+#loading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #999;
+  opacity: 1;
+  z-index: 1;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: opacity 2s; /* Safari */
+  transition: opacity 2s;
+}
 
 g {
   font-size: 4px;
@@ -92,21 +125,3 @@ g.contributor text {
 g.organization text {
   fill: red;
 }
-
-g.contributor .node-hover-label {
-  display: none;
-  cursor: pointer;
-}
-
-g.contributor:hover .node-hover-label {
-  display: block;
-}
-
-/* Hide nodes and edges that only have one connection
-
-g circle.single,
-g circle.single + a,
-g line.single {
-  display: none;
-}
- */

@@ -141,6 +141,13 @@ d3.json("../network.json", function(error, dataset) {
     .attr("xlink:href", function(d) {
       return "https://github.com/" + d.id
     })
+    .attr("class", function(d) {
+      if (d.contributor_to <= 1) {
+        return "node-link single";
+      } else {
+        return "node-link";
+      }
+    })
     .attr("target", "_blank");
 
   // adjust label position based on type height
@@ -170,22 +177,114 @@ d3.json("../network.json", function(error, dataset) {
     .attr("x", function(d) { return d.x })
     .attr("y", function(d) { return d.y; });
 
-  // add number of contributions to appear on hover
-  node.append("text")
-    .attr("class", "node-hover-label")
-    .text(function(d) {
-      return d.contributions
-    })
-    .attr("text-anchor", "middle")
-    .attr("x", function(d) { return d.x })
-    .attr("y", function(d) { return d.y; });
 });
 
-// wait enough time for SVG to be created and scroll to center point
+
+// set up the dropdown select with Selectr
+// https://github.com/Mobius1/Selectr
+var selector = new Selectr("#username", {
+  defaultSelected: false,
+  clearable: true,
+  placeholder: "GitHub username ...",
+});
+
+selector.clear();
+
+selector.on('selectr.clear', function() {
+  clearHighlights();
+});
+
+
+// wait enough time for SVG to be created and ...
 setTimeout(function() {
-  window.scrollTo(((w * .5) - (window.innerWidth * .5)), ((h * .5) - (window.innerHeight * .5)));
+
+  // scroll to center point
+  window.scrollTo(((w * .4) - (window.innerWidth * .4)), ((h * .4) - (window.innerHeight * .4)));
+
+  // add event listeners to all node circles for highlighting on mousedown
+  var nodeMarkers = document.querySelectorAll(".node-marker");
+  var markersLength = nodeMarkers.length;
+  for (var i = 0; i < markersLength; i++) {
+    nodeMarkers[i].addEventListener("mousedown", addHighlights);
+    // add attribute to make it easier to find this element later
+    nodeMarkers[i].setAttribute("data-listener", "addHighlights");
+  };
+
+  // fade loading screen
+  document.getElementById("loading").style.opacity = 0;
+  document.getElementById("loading").style.zIndex = -10;
+
 }, 1000);
 
+// highlight user node and edges
+function addHighlights(c) {
+
+  clearHighlights();
+
+  // check whether a specific username was sent in
+  // otherwise highlight the clicked target
+  var circle;
+  if ( c.currentTarget ) {
+    var circle = c.currentTarget;
+    selector.clear();
+  } else {
+    var circle = c;
+  };
+
+  // get user's node and highlight it
+  circle.classList.add("highlighted");
+
+  // make sure it's visible
+  circle.classList.remove("hidden");
+  var label = circle.nextSibling;
+  label.classList.remove("hidden");
+
+  // get user's edgelines and highlight them
+  var userName = circle.closest("g").id;
+  var edgeLines = document.querySelectorAll("[data-target='" + userName + "'], [data-source='" + userName + "']");
+  var linesLength = edgeLines.length;
+  for (var i = 0; i < linesLength; i++) {
+    edgeLines[i].classList.add("highlighted");
+    edgeLines[i].classList.remove("hidden");
+  }
+  // swap event listenter and data attributes to
+  // prepare to clear highlights on next mousedown
+  circle.removeEventListener("mousedown", addHighlights);
+  circle.addEventListener("mousedown", clearHighlights);
+  circle.setAttribute("data-listener", "clearHighlights");
+}
+
+// check for highlighted nodes and edges anywhere, and clear them
+function clearHighlights() {
+  var previous = document.querySelectorAll(".highlighted");
+  if (previous) {
+    var previousLength = previous.length;
+    for (var i = 0; i < previousLength; i++) {
+      previous[i].classList.remove("highlighted");
+      state = previous[i].getAttribute("data-listener");
+      if (state == "clearHighlights") {
+        previous[i].removeEventListener("mousedown", clearHighlights);
+        previous[i].addEventListener("mousedown", addHighlights);
+      }
+    };
+  };
+}
+
+// show or hide contributors who only have one org connection
+function toggleSingle() {
+  console.log("toggled");
+  var singles = document.querySelectorAll(".single");
+  var singlesLength = singles.length;
+  if (document.getElementById("toggle-single").checked) {
+    for (var i = 0; i < singlesLength; i++) {
+      singles[i].classList.add("hidden");
+    };
+  } else {
+    for (var i = 0; i < singlesLength; i++) {
+      singles[i].classList.remove("hidden");
+    };
+  }
+}
 
 // set variables for page navigation controls: find & zoom
 var graph = document.getElementById("network-graph");
@@ -214,16 +313,19 @@ function checkScale() {
 
 // adjust margin if SVG gets smaller than window width
 function checkMargin(newScale) {
+  console.log((w * newScale), window.innerWidth);
   if ((w * newScale) < window.innerWidth) {
     var margin = (window.innerWidth - (w * newScale)) / 2;
-    graph.style.marginLeft = margin;
-    graph.style.marginRight = margin;
+    console.log(margin);
+    graph.style.marginLeft = margin + "px";
+    graph.style.marginRight = margin + "px";
   } else {
     graph.style.marginLeft = "";
     graph.style.marginRight = "";
   }
 }
 
+// make the svg graph larger, but keep the view centered
 function zoomIn(n) {
   var currentScale = checkScale();
   var windowCenterX = window.innerWidth * .5;
@@ -254,6 +356,7 @@ function zoomIn(n) {
   checkMargin(newScale);
 }
 
+// make the svg graph smaller, but keep the view centered
 function zoomOut(n) {
   var currentScale = checkScale();
   var windowCenterX = window.innerWidth * .5;
@@ -284,27 +387,6 @@ function zoomOut(n) {
   checkMargin(newScale);
 }
 
-
-var selector = new Selectr("#username", {
-  defaultSelected: false,
-  clearable: true,
-  placeholder: "GitHub username ...",
-});
-
-selector.on('selectr.clear', function() {
-  clearHighlights();
-});
-
-function clearHighlights() {
-  var previous = document.querySelectorAll(".highlighted");
-  if (previous) {
-    var previousLength = previous.length;
-    for (var i = 0; i < previousLength; i++) {
-      previous[i].classList.remove("highlighted");
-    };
-  };
-}
-
 // based on user input, find a user or organization node,
 // highlight it, scroll to it so it’s centered in the window
 // and zoom to scale level 3.
@@ -324,16 +406,9 @@ function scrollToUser() {
     // check for previously highlighted lines and nodes and unhighlight
     clearHighlights();
 
-    // get user's node and highlight it
+    // highlight user’s node and edges
     var nodeCircle = node.getElementsByTagName("circle")[0];
-    nodeCircle.classList.add("highlighted");
-
-    // get user's edgelines and highlight them
-    var edgeLines = document.querySelectorAll("[data-target='" + userName + "'], [data-source='" + userName + "']");
-    var linesLength = edgeLines.length;
-    for (var i = 0; i < linesLength; i++) {
-      edgeLines[i].classList.add("highlighted");
-    };
+    addHighlights(nodeCircle);
 
     // set scale and scroll window to node position
     var scale = 3;
@@ -348,8 +423,6 @@ function scrollToUser() {
       left: ((circleX * scale) - windowCenterX),
       behavior: "smooth"
     })
-
-  // if the username is NOT in the graph ...
   }
 }
 

@@ -11,7 +11,7 @@
     
     
     <item>
-      <title>Network Graph</title>
+      <title>Network</title>
       <link>https://geealbers.github.io/museums-on-github/network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -25,6 +25,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://geealbers.github.io/museums-on-github/network.json</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Table</title>
+      <link>https://geealbers.github.io/museums-on-github/table/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geealbers.github.io/museums-on-github/table/</guid>
       <description></description>
     </item>
     

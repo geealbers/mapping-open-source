@@ -3,10 +3,10 @@ color palette and shades used (light to dark)
 https://coolors.co/8addea-ff0000-ffff00-505c5f-171a21
 
 White: white
-Blues: #E9F8FB, #B4E9F1, #8ADDEA, #7EC9D5
+Blues: #F4FBFD, #B4E9F1, #8ADDEA, #7EC9D5
 Reds: red
 Yellows: yellow
-Grays: #8C9799, #6F7D7F, #505C5F
+Grays: #8C9799, #505C5F
 Black: #171A21
 */
 
@@ -123,7 +123,7 @@ header input [type="checkbox"] {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #6F7D7F;
+  background-color: #8C9799;
   opacity: 1;
   z-index: 1;
   color: white;
@@ -192,13 +192,15 @@ table a:hover {
   border-bottom-color: #7EC9D5;
 }
 
+table tbody tr:first-child td {
+  padding-top: 20px;
+}
+
 tr:hover {
-  background-color: #E9F8FB;
   background-color: #F4FBFD;
 }
 
 th, td {
-   border-bottom: 1px solid #E9F8FB;
    border-bottom: 1px solid #B4E9F1;
    vertical-align: top;
    padding: 10px 4px 10px 0;
@@ -214,21 +216,23 @@ span.fork-marker {
 
 th {
   vertical-align: middle;
+  vertical-align: bottom;
   padding: 20px 0;
-  color: white;
-  background-color: #6F7D7F;
+  background-color: white;
+  color: red;
   height: 60px;
+  border-bottom: 1px solid red;
 }
 
 th svg.sort-icon {
   height: 1em;
   width: 1em;
   margin-bottom: -2px;
-  fill: white;
+  fill: red;
 }
 
 th a {
-  color: white;
+  color: red;
   text-decoration: none;
   border-bottom-width: 0;
   background-color: inherit;

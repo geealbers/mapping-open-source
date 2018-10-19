@@ -5,15 +5,15 @@ function setUpTable(){
     page: 2000
   };
 
-  var reposTable = new List('repos_table', options);
+  var reposTable = new List('mapping', options);
 
   reposTable.sort('repository', { order: "asc" });
 
-  // $("#repos_survey").on("keyup", "input", function () {
-  //   var numResults = $("#repos_survey tbody tr").length;
-  //   $(".results").text(numResults);
-  // });
-  $('#repos_table table').stickyTableHeaders();
+  $("#mapping").on("keyup", "input", function () {
+    var numResults = $("#repos_table tbody tr").length;
+    $(".results").text(numResults);
+  });
+  $('#mapping table').stickyTableHeaders();
 
 }
 

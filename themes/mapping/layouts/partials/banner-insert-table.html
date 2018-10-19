@@ -12,7 +12,9 @@
 <p><span id="number-of-repos">{{ len $.Site.Data.github }}</span> public repositories from <span id="number-of-orgs">{{ len $owners }}</span> organizations, written in <span id="number-of-languages">{{ len $languages }}</span> languages, since <span id="first-year">{{ dateFormat "2006" $date }}</span>.</p>
 <dl>
   <dt><span class="fork-marker">*</span></dt>
-  <dd>Forked from another source</dd>
+  <dd style="margin-left: 10px;"><em>Forked from another source</em></dd>
 </dl>
-<input type="text" id="search" onclick="" value="Search table ..." disabled>
-<button onclick="" disabled>Go</button>
+<form>
+  <input type="text" class="search" placeholder="Search repositories ...">
+  <p><span class="results">{{ len $.Site.Data.github }}</span> Results</p>
+</form>

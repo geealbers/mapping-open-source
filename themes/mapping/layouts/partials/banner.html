@@ -2,5 +2,7 @@
   <h1>{{ .Site.Title }}</h1>
   {{- if eq .Page.Params.layout "network" -}}
   {{ partial "banner-insert-network.html" . }}
+  {{- else if eq .Page.Params.layout "table" -}}
+  {{ partial "banner-insert-table.html" . }}
   {{- end -}}
 </header>

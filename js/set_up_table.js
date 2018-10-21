@@ -1,7 +1,7 @@
 // Sortable tables
 function setUpTable(){
   var options = {
-    valueNames: [ 'repository', 'source', 'language', 'update', 'stars', 'forks' ],
+    valueNames: [ 'repository', 'source', 'description', 'language', 'update', 'stars', 'forks' ],
     page: 2000
   };
 
@@ -14,6 +14,10 @@ function setUpTable(){
     $(".results").text(numResults);
   });
   $('#mapping table').stickyTableHeaders();
+
+  // removes sort event from any items classed .no-sort
+  // doing so allows the data from this column to remain searchable
+  $('.no-sort').off('click.sort');
 
 }
 

@@ -46,7 +46,7 @@ header {
   position: fixed;
   top: 20px;
   left: 20px;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
   z-index: 10;
   width: 200px;
   border: 4px solid #505C5F;
@@ -87,6 +87,13 @@ header ul[aria-role="nav"] a li svg {
 
 header p {
   margin-top: 0;
+}
+
+header p.updated {
+  color: #8C9799;
+  font-style: italic;
+  margin-bottom: 8px;
+  margin-top: 22px;
 }
 
 header dl {

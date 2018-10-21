@@ -13,3 +13,6 @@ disableKinds:
   - "taxonomy"
   - "taxonomyTerm"
 metaDataFormat: "yaml"
+
+params:
+  dataUpdated: 2018-10-21

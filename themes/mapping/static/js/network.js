@@ -109,17 +109,17 @@ d3.json("../network.json", function(error, dataset) {
   // size nodes based on number of contributions or repos
   node.append("circle")
     .attr("r", function(d) {
-      if (d.repos.length > 50 || d.repos > 100) {
+      if (d.repos.length > 50 && d.type == "contributor" || d.repos.length > 100 && d.type == "organization") {
         return 7;
-      } else if (d.repos.length >= 25 || d.repos >= 50) {
+      } else if (d.repos.length >= 25 && d.type == "contributor" || d.repos.length >= 50 && d.type == "organization") {
         return 6;
-      } else if (d.repos.length >= 10 || d.repos >= 20) {
+      } else if (d.repos.length >= 10 && d.type == "contributor" || d.repos.length >= 20 && d.type == "organization") {
         return 5;
-      } else if (d.repos.length >= 5 || d.repos >= 10) {
+      } else if (d.repos.length >= 5 && d.type == "contributor" || d.repos.length >= 10 && d.type == "organization") {
         return 4;
-      } else if (d.repos.length >= 2 || d.repos >= 2) {
+      } else if (d.repos.length >= 2 && d.type == "contributor" || d.repos.length >= 2 && d.type == "organization") {
         return 3;
-      } else if (d.repos.length < 2 || d.repos < 2) {
+      } else if (d.repos.length < 2 && d.type == "contributor" || d.repos.length < 2 && d.type == "organization") {
         return 2;
       }
     })
@@ -159,17 +159,17 @@ d3.json("../network.json", function(error, dataset) {
     .attr("class", "node-text")
     .attr("text-anchor", "middle")
     .attr("dy", function(d) {
-      if (d.repos.length > 50 || d.repos > 100) {
+      if (d.repos.length > 50 && d.type == "contributor" || d.repos.length > 100 && d.type == "organization") {
         return typeHeight + 7;
-      } else if (d.repos.length >= 25 || d.repos >= 50) {
+      } else if (d.repos.length >= 25 && d.type == "contributor" || d.repos.length >= 50 && d.type == "organization") {
         return typeHeight + 6;
-      } else if (d.repos.length >= 10 || d.repos >= 20) {
+      } else if (d.repos.length >= 10 && d.type == "contributor" || d.repos.length >= 20 && d.type == "organization") {
         return typeHeight + 5;
-      } else if (d.repos.length >= 5 || d.repos >= 10) {
+      } else if (d.repos.length >= 5 && d.type == "contributor" || d.repos.length >= 10 && d.type == "organization") {
         return typeHeight + 4;
-      } else if (d.repos.length >= 2 || d.repos >= 2) {
+      } else if (d.repos.length >= 2 && d.type == "contributor" || d.repos.length >= 2 && d.type == "organization") {
         return typeHeight + 3;
-      } else if (d.repos.length < 2 || d.repos < 2) {
+      } else if (d.repos.length < 2 && d.type == "contributor" || d.repos.length < 2 && d.type == "organization") {
         return typeHeight + 2;
       }
     })
@@ -185,7 +185,7 @@ d3.json("../network.json", function(error, dataset) {
     .attr("id", function(d) { return d.id + "-box" })
     .attr("class", "box hidden")
     .attr("width", 80 )
-    .attr("height", function(d) { return (d.repos.length * 10); })
+    .attr("height", function(d) { return (d.repos.length * 12); })
     .attr("x", function(d) { return d.x + 10; })
     .attr("y", function(d) { return d.y; })
     .append("xhtml:div")
@@ -210,17 +210,26 @@ d3.json("../network.json", function(error, dataset) {
     svg.selectAll(".box div")
       .insert("p",":first-child")
       .text( function(d) {
-        if (d.contributions == 1) {
+        if (d.contributions == 1 ) {
           var c = "contribution"
         } else {
           var c = "contributions"
+        };
+        if (d.contributor_count == 1) {
+          var cn = "contributor"
+        } else {
+          var cn = "contributors"
         };
         if (d.repos.length == 1) {
           var r = "repo"
         } else {
           var r = "repos"
         };
-        return (d.contributions + " " + c + " in " + d.repos.length + " public " + r );
+        if (d.type == "organization") {
+          return (d.contributor_count + " " + cn + " | " + d.repos.length + " public " + r );
+        } else {
+          return (d.contributions + " " + c + " in " + d.repos.length + " public " + r );
+        }
       });
 
     svg.selectAll(".box div")
@@ -287,6 +296,8 @@ function openBox(c) {
   circle = c.currentTarget;
   nodeId = circle.parentElement.id;
   labelID = nodeId + "-box";
+
+  addHighlights(circle);
 
   // open it
   document.getElementById(labelID).classList.remove("hidden");

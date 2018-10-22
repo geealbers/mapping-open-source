@@ -1,5 +1,5 @@
 {{/*
-  for every repo, range through the contributors and add any owners of repos they belong to into an array keyed to their name
+  for every repo, range through the contributors and add any owners of repos they belong to into an array keyed to their name, also create an array of repo names for each contributors
   */}}
 {{- range $.Site.Data.github -}}
   {{- $owner_name := .owner_name -}}
@@ -24,10 +24,12 @@
 {{- $contributors := uniq ($.Page.Scratch.Get "contributors") -}}
 
 {{/*
-  for each repo, range through the contributors and add their name to an array keyed to the owner_name
+  for each repo, range through the contributors and add their name to an array keyed to the owner_name, also create an array of repo names
   */}}
 {{- range $.Site.Data.github -}}
   {{- $owner_name := .owner_name -}}
+  {{ $nameRepos := add .owner_name "-repos"}}
+  {{- $.Page.Scratch.Add $nameRepos (slice .name_full) -}}
   {{- range .contributor -}}
     {{- $.Page.Scratch.Add $owner_name (slice .name) -}}
   {{- end -}}
@@ -54,9 +56,11 @@
 {{ $len := len $owners -}}
 {{ range $index, $element := $owners -}}
 {{- $repoCount := len (where $.Site.Data.github "owner_name" .) -}}
+{{- $contributorCount := uniq ($.Page.Scratch.Get .) | len -}}
+{{- $repos := $.Page.Scratch.Get (add . "-repos") -}}
 {{- $uniqueOwners := uniq ($.Page.Scratch.Get .) -}}
 {{- $x := delimit $uniqueOwners ", " -}}
-  {{ dict "id" . "type" "organization" "repos" $repoCount | jsonify }}{{- if eq (add $index 1) $len -}}{{ else }}, {{ end }}
+  {{ dict "id" . "type" "organization" "contributor_count" $contributorCount "repos" $repos | jsonify }}{{- if eq (add $index 1) $len -}}{{ else }}, {{ end }}
 {{ end -}}
 ],
 "edges": [

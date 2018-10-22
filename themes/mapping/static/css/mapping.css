@@ -198,6 +198,61 @@ g.organization text {
   fill: red;
 }
 
+.box {
+  overflow: visible;
+}
+
+.box div {
+  background-color: white;
+  padding: 2px;
+  border: 1px solid #505C5F;
+  border-radius: 3px;
+}
+
+.box h3 {
+  margin: 2px 2px 0 2px;
+  text-transform: uppercase;
+  color: #505C5F;
+}
+
+.box p {
+  margin-left: 2px;
+  margin-top: 0;
+  font-style: italic;
+}
+
+.box div.button {
+  color: #505C5F;
+  height: 6px;
+  width: 6px;
+  float: right;
+  text-align: red;
+  padding: 0;
+  margin: 0;
+  border-width: 0;
+  font-size: 8px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.box div ul {
+  padding-left: 0;
+  margin: 3px 6px;
+}
+
+.box li {
+  margin-bottom: 2px;
+}
+
+.box a {
+  color: #505C5F;
+}
+
+.box ul a {
+  color: red;
+}
+
+
 /* Table */
 
 table {

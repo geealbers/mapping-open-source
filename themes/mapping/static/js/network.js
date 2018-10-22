@@ -109,17 +109,17 @@ d3.json("../network.json", function(error, dataset) {
   // size nodes based on number of contributions or repos
   node.append("circle")
     .attr("r", function(d) {
-      if (d.contributions > 1000 || d.repos > 100) {
+      if (d.repos.length > 50 || d.repos > 100) {
         return 7;
-      } else if (d.contributions >= 500 || d.repos >= 50) {
+      } else if (d.repos.length >= 25 || d.repos >= 50) {
         return 6;
-      } else if (d.contributions >= 200 || d.repos >= 20) {
+      } else if (d.repos.length >= 10 || d.repos >= 20) {
         return 5;
-      } else if (d.contributions >= 50 || d.repos >= 50) {
+      } else if (d.repos.length >= 5 || d.repos >= 10) {
         return 4;
-      } else if (d.contributions >= 10 || d.repos >= 1) {
+      } else if (d.repos.length >= 2 || d.repos >= 2) {
         return 3;
-      } else if (d.contributions < 10 || d.repos < 1) {
+      } else if (d.repos.length < 2 || d.repos < 2) {
         return 2;
       }
     })
@@ -159,23 +159,84 @@ d3.json("../network.json", function(error, dataset) {
     .attr("class", "node-text")
     .attr("text-anchor", "middle")
     .attr("dy", function(d) {
-      if (d.contributions > 1000 || d.repos > 100) {
+      if (d.repos.length > 50 || d.repos > 100) {
         return typeHeight + 7;
-      } else if (d.contributions >= 500 || d.repos >= 50) {
+      } else if (d.repos.length >= 25 || d.repos >= 50) {
         return typeHeight + 6;
-      } else if (d.contributions >= 200 || d.repos >= 20) {
+      } else if (d.repos.length >= 10 || d.repos >= 20) {
         return typeHeight + 5;
-      } else if (d.contributions >= 50 || d.repos >= 50) {
+      } else if (d.repos.length >= 5 || d.repos >= 10) {
         return typeHeight + 4;
-      } else if (d.contributions >= 10 || d.repos >= 1) {
+      } else if (d.repos.length >= 2 || d.repos >= 2) {
         return typeHeight + 3;
-      } else if (d.contributions < 10 || d.repos < 1) {
+      } else if (d.repos.length < 2 || d.repos < 2) {
         return typeHeight + 2;
       }
     })
     .text(function(d) { return d.id })
     .attr("x", function(d) { return d.x })
     .attr("y", function(d) { return d.y; });
+
+  // create a label box to list and link all repositories
+  var label = svg.selectAll(".box")
+    .data(dataset.nodes)
+    .enter()
+    .append("foreignObject")
+    .attr("id", function(d) { return d.id + "-box" })
+    .attr("class", "box hidden")
+    .attr("width", 80 )
+    .attr("height", function(d) { return (d.repos.length * 10); })
+    .attr("x", function(d) { return d.x + 10; })
+    .attr("y", function(d) { return d.y; })
+    .append("xhtml:div")
+    .append("ul");
+
+    label.selectAll("ul")
+      .data(function(d)
+         { return d.repos; })
+      .enter()
+      .append("li")
+      .attr("class", "box-link")
+      .append("a")
+      .attr("target", "_blank")
+      .attr("html:href", function(d) {
+        return "https://github.com/" + d
+      });
+
+    label.selectAll("a")
+      .append("text")
+      .text( function(d) { return d; });
+
+    svg.selectAll(".box div")
+      .insert("p",":first-child")
+      .text( function(d) {
+        if (d.contributions == 1) {
+          var c = "contribution"
+        } else {
+          var c = "contributions"
+        };
+        if (d.repos.length == 1) {
+          var r = "repo"
+        } else {
+          var r = "repos"
+        };
+        return (d.contributions + " " + c + " in " + d.repos.length + " public " + r );
+      });
+
+    svg.selectAll(".box div")
+      .insert("a",":first-child")
+      .attr("html:href", function(d) {
+        return "https://github.com/" + d.id
+      })
+      .attr("target", "_blank")
+      .append("h3")
+      .text( function(d) { return d.id; } );
+
+    svg.selectAll(".box div")
+      .insert("div",":first-child")
+      .attr("class", "button")
+      .attr("onclick", "closeBox(); clearHighlights()")
+      .text( "×" );
 
 });
 
@@ -205,9 +266,8 @@ setTimeout(function() {
   var nodeMarkers = document.querySelectorAll(".node-marker");
   var markersLength = nodeMarkers.length;
   for (var i = 0; i < markersLength; i++) {
-    nodeMarkers[i].addEventListener("mousedown", addHighlights);
-    // add attribute to make it easier to find this element later
-    nodeMarkers[i].setAttribute("data-listener", "addHighlights");
+    nodeMarkers[i].addEventListener("mousedown", openBox);
+    nodeMarkers[i].addEventListener("mouseover", addHighlights);
   };
 
   // fade loading screen
@@ -216,42 +276,78 @@ setTimeout(function() {
 
 }, 1000);
 
+
+// open label box with repository list
+function openBox(c) {
+
+  // close any previously opened
+  closeBox();
+
+  // use IDs to connect box and node
+  circle = c.currentTarget;
+  nodeId = circle.parentElement.id;
+  labelID = nodeId + "-box";
+
+  // open it
+  document.getElementById(labelID).classList.remove("hidden");
+  document.getElementById(labelID).classList.add("opened");
+}
+
+
+// close label box
+function closeBox() {
+
+  // find any that are open
+  openBox = document.querySelectorAll(".opened");
+
+  // close them
+  boxLength = openBox.length;
+  for (var i = 0; i < boxLength; i++) {
+    openBox[i].classList.remove("opened");
+    openBox[i].classList.add("hidden");
+  }
+
+}
+
 // highlight user node and edges
 function addHighlights(c) {
 
-  clearHighlights();
+  openBox = document.querySelectorAll(".opened");
 
-  // check whether a specific username was sent in
-  // otherwise highlight the clicked target
-  var circle;
-  if ( c.currentTarget ) {
-    var circle = c.currentTarget;
-    selector.clear();
+  if (openBox.length > 0) {
+
   } else {
-    var circle = c;
-  };
 
-  // get user's node and highlight it
-  circle.classList.add("highlighted");
+    clearHighlights();
 
-  // make sure it's visible
-  circle.classList.remove("hidden");
-  var label = circle.nextSibling;
-  label.classList.remove("hidden");
+    // check whether a specific username was sent in
+    // otherwise highlight the clicked target
+    var circle;
+    if ( c.currentTarget ) {
+      var circle = c.currentTarget;
+      selector.clear();
+    } else {
+      var circle = c;
+    };
 
-  // get user's edgelines and highlight them
-  var userName = circle.closest("g").id;
-  var edgeLines = document.querySelectorAll("[data-target='" + userName + "'], [data-source='" + userName + "']");
-  var linesLength = edgeLines.length;
-  for (var i = 0; i < linesLength; i++) {
-    edgeLines[i].classList.add("highlighted");
-    edgeLines[i].classList.remove("hidden");
+    // get user's node and highlight it
+    circle.classList.add("highlighted");
+
+    // make sure it's visible
+    circle.classList.remove("hidden");
+    var label = circle.nextSibling;
+    label.classList.remove("hidden");
+
+    // get user's edgelines and highlight them
+    var userName = circle.closest("g").id;
+    var edgeLines = document.querySelectorAll("[data-target='" + userName + "'], [data-source='" + userName + "']");
+    var linesLength = edgeLines.length;
+    for (var i = 0; i < linesLength; i++) {
+      edgeLines[i].classList.add("highlighted");
+      edgeLines[i].classList.remove("hidden");
+    }
+
   }
-  // swap event listenter and data attributes to
-  // prepare to clear highlights on next mousedown
-  circle.removeEventListener("mousedown", addHighlights);
-  circle.addEventListener("mousedown", clearHighlights);
-  circle.setAttribute("data-listener", "clearHighlights");
 }
 
 // check for highlighted nodes and edges anywhere, and clear them
@@ -261,11 +357,6 @@ function clearHighlights() {
     var previousLength = previous.length;
     for (var i = 0; i < previousLength; i++) {
       previous[i].classList.remove("highlighted");
-      state = previous[i].getAttribute("data-listener");
-      if (state == "clearHighlights") {
-        previous[i].removeEventListener("mousedown", clearHighlights);
-        previous[i].addEventListener("mousedown", addHighlights);
-      }
     };
   };
 }

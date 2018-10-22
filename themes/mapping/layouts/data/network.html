@@ -3,8 +3,11 @@
   */}}
 {{- range $.Site.Data.github -}}
   {{- $owner_name := .owner_name -}}
+  {{- $repo_name := .name_full -}}
   {{- range .contributor -}}
+    {{ $nameRepos := add .name "-repos"}}
     {{- $.Page.Scratch.Add .name (slice $owner_name) -}}
+    {{- $.Page.Scratch.Add $nameRepos (slice $repo_name) -}}
   {{- end }}
 {{- end -}}
 
@@ -45,7 +48,8 @@
   {{- $connections := uniq ($.Page.Scratch.Get .) | len -}}
   {{- $contributionName :=  printf "%s%s" . "-contributions" -}}
   {{- $contributions :=  $.Page.Scratch.Get $contributionName -}}
-  {{ dict "id" . "type" "contributor" "contributor_to" $connections "contributions" $contributions | jsonify }},
+  {{- $repos := $.Page.Scratch.Get (add . "-repos") -}}
+  {{ dict "id" . "type" "contributor" "contributor_to" $connections "contributions" $contributions "repos" $repos | jsonify }},
 {{ end -}}
 {{ $len := len $owners -}}
 {{ range $index, $element := $owners -}}

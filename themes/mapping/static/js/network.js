@@ -185,7 +185,7 @@ d3.json("../network.json", function(error, dataset) {
     .attr("id", function(d) { return d.id + "-box" })
     .attr("class", "box hidden")
     .attr("width", 80 )
-    .attr("height", function(d) { return (d.repos.length * 12); })
+    .attr("height", function(d) { return ((d.repos.length * 12) + 24); })
     .attr("x", function(d) { return d.x + 10; })
     .attr("y", function(d) { return d.y; })
     .append("xhtml:div")

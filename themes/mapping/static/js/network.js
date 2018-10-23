@@ -262,6 +262,7 @@ selector.clear();
 
 selector.on('selectr.clear', function() {
   clearHighlights();
+  closeBox();
 });
 
 
@@ -276,7 +277,7 @@ setTimeout(function() {
   var markersLength = nodeMarkers.length;
   for (var i = 0; i < markersLength; i++) {
     nodeMarkers[i].addEventListener("mousedown", openBox);
-    nodeMarkers[i].addEventListener("mouseover", addHighlights);
+    nodeMarkers[i].addEventListener("mouseover", checkHighlights);
   };
 
   // fade loading screen
@@ -289,15 +290,22 @@ setTimeout(function() {
 // open label box with repository list
 function openBox(c) {
 
-  // close any previously opened
+  // clear any previously opened and highlighted
   closeBox();
+  clearHighlights();
 
   // use IDs to connect box and node
-  circle = c.currentTarget;
-  nodeId = circle.parentElement.id;
+  var shape;
+  if ( c.currentTarget ) {
+    var shape = c.currentTarget;
+    selector.clear();
+  } else {
+    var shape = c;
+  };
+  nodeId = shape.parentElement.id;
   labelID = nodeId + "-box";
 
-  addHighlights(circle);
+  addHighlights(shape);
 
   // open it
   document.getElementById(labelID).classList.remove("hidden");
@@ -309,13 +317,13 @@ function openBox(c) {
 function closeBox() {
 
   // find any that are open
-  openBox = document.querySelectorAll(".opened");
+  openBoxes = document.querySelectorAll(".opened");
 
   // close them
-  boxLength = openBox.length;
+  boxLength = openBoxes.length;
   for (var i = 0; i < boxLength; i++) {
-    openBox[i].classList.remove("opened");
-    openBox[i].classList.add("hidden");
+    openBoxes[i].classList.remove("opened");
+    openBoxes[i].classList.add("hidden");
   }
 
 }
@@ -323,41 +331,30 @@ function closeBox() {
 // highlight user node and edges
 function addHighlights(c) {
 
-  openBox = document.querySelectorAll(".opened");
-
-  if (openBox.length > 0) {
-
+  // check whether a specific username was sent in
+  // otherwise highlight the clicked target
+  var circle;
+  if ( c.currentTarget ) {
+    var circle = c.currentTarget;
   } else {
+    var circle = c;
+  };
 
-    clearHighlights();
+  // get user's node and highlight it
+  circle.classList.add("highlighted");
 
-    // check whether a specific username was sent in
-    // otherwise highlight the clicked target
-    var circle;
-    if ( c.currentTarget ) {
-      var circle = c.currentTarget;
-      selector.clear();
-    } else {
-      var circle = c;
-    };
+  // make sure it's visible
+  circle.classList.remove("hidden");
+  var label = circle.nextSibling;
+  label.classList.remove("hidden");
 
-    // get user's node and highlight it
-    circle.classList.add("highlighted");
-
-    // make sure it's visible
-    circle.classList.remove("hidden");
-    var label = circle.nextSibling;
-    label.classList.remove("hidden");
-
-    // get user's edgelines and highlight them
-    var userName = circle.closest("g").id;
-    var edgeLines = document.querySelectorAll("[data-target='" + userName + "'], [data-source='" + userName + "']");
-    var linesLength = edgeLines.length;
-    for (var i = 0; i < linesLength; i++) {
-      edgeLines[i].classList.add("highlighted");
-      edgeLines[i].classList.remove("hidden");
-    }
-
+  // get user's edgelines and highlight them
+  var userName = circle.closest("g").id;
+  var edgeLines = document.querySelectorAll("[data-target='" + userName + "'], [data-source='" + userName + "']");
+  var linesLength = edgeLines.length;
+  for (var i = 0; i < linesLength; i++) {
+    edgeLines[i].classList.add("highlighted");
+    edgeLines[i].classList.remove("hidden");
   }
 }
 
@@ -370,6 +367,17 @@ function clearHighlights() {
       previous[i].classList.remove("highlighted");
     };
   };
+}
+
+
+// if there are any open boxes, don't change the highlights on mouseover
+// otherwise okay to change
+function checkHighlights(c) {
+  openBoxes = document.querySelectorAll(".opened");
+  if (openBoxes.length == 0) {
+    clearHighlights();
+    addHighlights(c.currentTarget);
+  }
 }
 
 // show or hide contributors who only have one org connection
@@ -506,11 +514,13 @@ function scrollToUser() {
   if (node) {
 
     // check for previously highlighted lines and nodes and unhighlight
-    clearHighlights();
+    // clearHighlights();
 
     // highlight user’s node and edges
     var nodeCircle = node.getElementsByTagName("circle")[0];
-    addHighlights(nodeCircle);
+    // addHighlights(nodeCircle);
+    console.log(node, nodeCircle);
+    openBox(nodeCircle);
 
     // set scale and scroll window to node position
     var scale = 3;

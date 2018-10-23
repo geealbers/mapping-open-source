@@ -1,0 +1,31 @@
+{{- range $.Site.Data.github -}}
+  {{- $year := dateFormat "2006" .date_created -}}
+  {{- $.Page.Scratch.Add "year-array" (slice $year) -}}
+{{- end -}}
+{{- $years := uniq ($.Page.Scratch.Get "year-array") | sort -}}
+
+{{- range $.Site.Data.github -}}
+  {{- $.Page.Scratch.Add "owners" (slice .owner_name) -}}
+{{- end -}}
+{{- $owners := uniq ($.Page.Scratch.Get "owners") -}}
+
+[
+{{- $lenYears := len $years -}}
+{{- range $index, $element := $years -}}
+{{- $thisYear := . -}}
+{{- $.Page.Scratch.SetInMap $thisYear "year" $thisYear -}}
+{{- range $.Site.Data.github }}
+  {{- $repoYear := dateFormat "2006" .date_created -}}
+  {{- $owner := .owner_name -}}
+  {{ $count := printf "%s-%s" $owner $thisYear }}
+  {{- if eq $repoYear $thisYear -}}
+    {{- $.Page.Scratch.Add $count 1 -}}
+    {{- $.Page.Scratch.SetInMap $thisYear $owner ($.Page.Scratch.Get $count) -}}
+  {{- else -}}
+  {{- $.Page.Scratch.Add $count 0 -}}
+    {{- $.Page.Scratch.SetInMap $thisYear $owner ($.Page.Scratch.Get $count) -}}
+  {{- end -}}
+{{- end }}
+  {{ $.Page.Scratch.Get $thisYear | jsonify }}{{- if eq (add $index 1) $lenYears -}}{{ else }}, {{ end }}
+{{ end -}}
+]

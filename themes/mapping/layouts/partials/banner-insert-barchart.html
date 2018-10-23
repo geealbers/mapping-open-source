@@ -1,0 +1,12 @@
+<p>Repositories created by institution</p>
+<div>
+  {{- range $.Site.Data.github -}}
+    {{- $.Page.Scratch.Add "owners" (slice .owner_name) -}}
+  {{- end -}}
+  {{- $owners := uniq ($.Page.Scratch.Get "owners") -}}
+  <select id="owners" onchange="highlightOwner()">
+    {{- range $index, $element := $owners -}}
+      <option value="{{ $index }}">{{ . }}</option>
+    {{- end -}}
+  </select>
+</div>

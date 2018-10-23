@@ -350,3 +350,39 @@ th:nth-child(n+5),
 td:nth-child(n+5) {
   text-align: center;
 }
+
+/* Bar Chart */
+
+/* svg {
+    font: 10px sans-serif;
+    shape-rendering: crispEdges;
+  } */
+
+#barchart-container {
+  display: flex;
+  justify-content: center;
+  margin-left: 280px;
+  margin-top: 100px;
+}
+#barchart-container svg g {
+  font-size: 12px;
+}
+
+#barchart-container .highlighted {
+  fill: yellow;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+}
+
+path.domain {
+  stroke: none;
+}
+
+.y .tick line {
+  stroke: #505C5F;
+}
+

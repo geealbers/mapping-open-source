@@ -7,14 +7,16 @@
     {{ if eq .Permalink $.Page.Permalink }}
     <li class="current-page">
       {{- if eq $icon "network" }}{{ template "network" . -}}
-      {{- else if eq $icon "table" }}{{ template "table" . }}{{ end -}}
+      {{- else if eq $icon "table" }}{{ template "table" . }}
+      {{- else if eq $icon "barchart" }}{{ template "barchart" . }}{{ end -}}
       <span class="visually-hidden">{{ .Title }}</span>
     </li>
     {{ else }}
     <a href="{{ .Permalink }}">
     <li>
       {{- if eq $icon "network" }}{{ template "network" . -}}
-      {{- else if eq $icon "table" }}{{ template "table" . }}{{ end -}}
+      {{- else if eq $icon "table" }}{{ template "table" . }}
+      {{- else if eq $icon "barchart" }}{{ template "barchart" . }}{{ end -}}
       <span class="visually-hidden">{{ .Title }}</span>
     </li>
     </a>
@@ -26,6 +28,8 @@
   {{ partial "banner-insert-network.html" . }}
   {{- else if eq .Page.Params.layout "table" -}}
   {{ partial "banner-insert-table.html" . }}
+  {{- else if eq .Page.Params.layout "barchart" -}}
+  {{ partial "banner-insert-barchart.html" . }}
   {{- end -}}
   <p class="updated">As of {{ dateFormat "Jan. 2, 2006" $.Site.Params.dataUpdated }}</p>
 </header>
@@ -42,10 +46,10 @@
 <svg viewBox="0 0 32 32" class="table-icon"><g><path d="M32,26.5c0,1.7-1.4,3.1-3.1,3.1H3.1c-1.7,0-3.1-1.4-3.1-3.1V5.5c0-1.7,1.4-3.1,3.1-3.1h25.8c1.7,0,3.1,1.4,3.1,3.1V26.5z M9.8,8c0-0.3-0.3-0.6-0.6-0.6H3.1C2.7,7.4,2.5,7.7,2.5,8v3.7c0,0.3,0.3,0.6,0.6,0.6h6.2c0.3,0,0.6-0.3,0.6-0.6V8z M9.8,15.4 c0-0.3-0.3-0.6-0.6-0.6H3.1c-0.3,0-0.6,0.3-0.6,0.6v3.7c0,0.3,0.3,0.6,0.6,0.6h6.2c0.3,0,0.6-0.3,0.6-0.6V15.4z M9.8,22.8 c0-0.3-0.3-0.6-0.6-0.6H3.1c-0.3,0-0.6,0.3-0.6,0.6v3.7c0,0.3,0.3,0.6,0.6,0.6h6.2c0.3,0,0.6-0.3,0.6-0.6V22.8z M19.7,8 c0-0.3-0.3-0.6-0.6-0.6h-6.2c-0.3,0-0.6,0.3-0.6,0.6v3.7c0,0.3,0.3,0.6,0.6,0.6h6.2c0.3,0,0.6-0.3,0.6-0.6V8z M19.7,15.4 c0-0.3-0.3-0.6-0.6-0.6h-6.2c-0.3,0-0.6,0.3-0.6,0.6v3.7c0,0.3,0.3,0.6,0.6,0.6h6.2c0.3,0,0.6-0.3,0.6-0.6V15.4z M19.7,22.8 c0-0.3-0.3-0.6-0.6-0.6h-6.2c-0.3,0-0.6,0.3-0.6,0.6v3.7c0,0.3,0.3,0.6,0.6,0.6h6.2c0.3,0,0.6-0.3,0.6-0.6V22.8z M29.5,8 c0-0.3-0.3-0.6-0.6-0.6h-6.2c-0.3,0-0.6,0.3-0.6,0.6v3.7c0,0.3,0.3,0.6,0.6,0.6h6.2c0.3,0,0.6-0.3,0.6-0.6V8z M29.5,15.4 c0-0.3-0.3-0.6-0.6-0.6h-6.2c-0.3,0-0.6,0.3-0.6,0.6v3.7c0,0.3,0.3,0.6,0.6,0.6h6.2c0.3,0,0.6-0.3,0.6-0.6V15.4z M29.5,22.8 c0-0.3-0.3-0.6-0.6-0.6h-6.2c-0.3,0-0.6,0.3-0.6,0.6v3.7c0,0.3,0.3,0.6,0.6,0.6h6.2c0.3,0,0.6-0.3,0.6-0.6V22.8z"/></g></svg>
 {{ end }}
 
-{{ define "bar-chart" }}
-<svg viewBox="0 0 32 32" class="bar-chart-icon"><g><path d="M32,28H0V4h2v22h30V28z M10,24H6v-8h4V24z M16,24h-4V8h4V24z M22,24h-4V12h4V24z M28,24h-4V6h4V24z"/></g></svg>
+{{ define "barchart" }}
+<svg viewBox="0 0 32 32" class="barchart-icon"><g><path d="M32,28H0V4h2v22h30V28z M10,24H6v-8h4V24z M16,24h-4V8h4V24z M22,24h-4V12h4V24z M28,24h-4V6h4V24z"/></g></svg>
 {{ end }}
 
-{{ define "pie-chart" }}
-<svg viewBox="0 0 32 32" class="pie-chart-icon"><g><path d="M24.3,27.2c-2.6,2.6-6.2,4.2-10.1,4.2C6.4,31.4,0,25,0,17.2S6.4,3,14.2,3v14.1L24.3,27.2z M16.6,14.8V0.6 c7.9,0,14.2,6.4,14.2,14.2H16.6z M32,17.2c0,3.9-1.6,7.5-4.2,10.1L17.7,17.2H32z"/></g></svg>
+{{ define "piechart" }}
+<svg viewBox="0 0 32 32" class="piechart-icon"><g><path d="M24.3,27.2c-2.6,2.6-6.2,4.2-10.1,4.2C6.4,31.4,0,25,0,17.2S6.4,3,14.2,3v14.1L24.3,27.2z M16.6,14.8V0.6 c7.9,0,14.2,6.4,14.2,14.2H16.6z M32,17.2c0,3.9-1.6,7.5-4.2,10.1L17.7,17.2H32z"/></g></svg>
 {{ end }}

@@ -6,7 +6,7 @@
 
 # Add your GitHub 40-charcter authentication token:
 
-TOKEN=c569a70d354d0a6cf7f750684ef7f749da3c267e
+TOKEN=add-your-github-token-here
 
 
 # Grab all museum user names from the data/museums.yml file

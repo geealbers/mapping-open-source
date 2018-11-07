@@ -386,3 +386,77 @@ path.domain {
   stroke: #505C5F;
 }
 
+/* Essay */
+
+.essay {
+  font-size: 21px;
+  font-family: serif;
+  margin-top: 20px;
+  margin-left: 328px;
+  max-width: 680px;
+}
+
+.essay .header {
+  margin-bottom: 140px;
+  color: #8C9799;
+}
+
+.essay .header p {
+  margin: 0;
+}
+
+.essay a {
+  color: #171A21;
+  text-decoration: none;
+  border-bottom: 3px solid #8ADDEA;
+}
+
+.essay blockquote {
+  font-style: italic;
+}
+
+.essay blockquote em {
+  font-style: normal;
+}
+
+.essay dl {
+  margin-right: 2em;
+}
+
+.essay dt {
+  font-weight: bold;
+  border-left: 1px solid #8C9799;
+  border-top: 1px solid #8C9799;
+  border-right: 1px solid #8C9799;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding-left: 1em;
+  padding-top: 1em;
+  padding-right: 1em;
+}
+
+.essay dd {
+  margin-left: 0;
+  margin-bottom: 1em;
+  border-left: 1px solid #8C9799;
+  border-bottom: 1px solid #8C9799;
+  border-right: 1px solid #8C9799;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  padding-right: 1em;
+}
+
+.essay sup,
+.essay sub {
+  line-height: 0;
+}
+
+.essay sup a,
+.essay sub a {
+  border-bottom-width: 0;
+  background-color: yellow;
+  padding: 0 .2em;
+  border-radius: .2em;
+}

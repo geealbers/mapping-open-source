@@ -136,7 +136,7 @@ d3.json("../barchart.json", function(error, data) {
 var selector = new Selectr("#owners", {
   defaultSelected: false,
   clearable: true,
-  placeholder: "GitHub organization name ...",
+  placeholder: "Organization ...",
 });
 
 selector.clear();

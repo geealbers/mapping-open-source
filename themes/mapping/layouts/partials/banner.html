@@ -5,18 +5,22 @@
   {{ if eq .Params.type "page" }}
   {{ $icon := .Params.layout }}
     {{ if eq .Permalink $.Page.Permalink }}
-    <li class="current-page">
+    <li class="current-page{{ if eq $icon "about"}} about{{ end }}">
       {{- if eq $icon "network" }}{{ template "network" . -}}
       {{- else if eq $icon "table" }}{{ template "table" . }}
-      {{- else if eq $icon "barchart" }}{{ template "barchart" . }}{{- else if eq $icon "piechart" }}{{ template "piechart" . }}{{ end -}}
+      {{- else if eq $icon "barchart" }}{{ template "barchart" . }}
+      {{- else if eq $icon "piechart" }}{{ template "piechart" . }}
+      {{- else if eq $icon "about" }}{{ template "about" . }}{{ end -}}
       <span class="visually-hidden">{{ .Title }}</span>
     </li>
     {{ else }}
     <a href="{{ .Permalink }}">
-    <li>
+    <li{{ if eq $icon "about"}} class="about"{{ end }}>
       {{- if eq $icon "network" }}{{ template "network" . -}}
       {{- else if eq $icon "table" }}{{ template "table" . }}
-      {{- else if eq $icon "barchart" }}{{ template "barchart" . }}{{- else if eq $icon "piechart" }}{{ template "piechart" . }}{{ end -}}
+      {{- else if eq $icon "barchart" }}{{ template "barchart" . }}
+      {{- else if eq $icon "piechart" }}{{ template "piechart" . }}
+      {{- else if eq $icon "about" }}{{ template "about" . }}{{ end -}}
       <span class="visually-hidden">{{ .Title }}</span>
     </li>
     </a>
@@ -54,4 +58,19 @@
 
 {{ define "piechart" }}
 <svg viewBox="0 0 32 32" class="piechart-icon"><g><path d="M24.3,27.2c-2.6,2.6-6.2,4.2-10.1,4.2C6.4,31.4,0,25,0,17.2S6.4,3,14.2,3v14.1L24.3,27.2z M16.6,14.8V0.6 c7.9,0,14.2,6.4,14.2,14.2H16.6z M32,17.2c0,3.9-1.6,7.5-4.2,10.1L17.7,17.2H32z"/></g></svg>
+{{ end }}
+
+{{ define "about" }}
+<svg viewBox="0 0 32 32" class="about-icon"><g><path d="M29.86,7.97C31.28,10.42,32,13.1,32,16s-0.72,5.58-2.14,8.03c-1.43,2.45-3.37,4.39-5.82,5.82C21.58,31.28,18.9,32,16,32
+  c-2.9,0-5.58-0.72-8.03-2.14c-2.45-1.43-4.39-3.37-5.82-5.82C0.72,21.58,0,18.9,0,16s0.72-5.58,2.15-8.03
+  c1.43-2.45,3.37-4.39,5.82-5.82C10.42,0.72,13.1,0,16,0c2.9,0,5.58,0.72,8.03,2.15C26.48,3.58,28.42,5.52,29.86,7.97z M24,12
+  c0-1.22-0.39-2.35-1.16-3.4c-0.77-1.04-1.73-1.85-2.89-2.42c-1.15-0.57-2.33-0.85-3.54-0.85c-3.38,0-5.95,1.48-7.73,4.44
+  c-0.21,0.33-0.15,0.63,0.17,0.88l2.75,2.08c0.1,0.08,0.23,0.12,0.39,0.12c0.22,0,0.4-0.08,0.52-0.25c0.74-0.94,1.33-1.58,1.79-1.92
+  c0.47-0.33,1.07-0.5,1.79-0.5c0.67,0,1.26,0.18,1.78,0.54c0.52,0.36,0.78,0.77,0.78,1.23c0,0.53-0.14,0.95-0.42,1.27
+  c-0.28,0.32-0.75,0.63-1.42,0.94c-0.88,0.39-1.68,0.99-2.41,1.8c-0.73,0.81-1.09,1.68-1.09,2.61v0.75c0,0.19,0.06,0.35,0.19,0.48
+  C13.65,19.94,13.81,20,14,20h4c0.19,0,0.35-0.06,0.48-0.19c0.12-0.13,0.19-0.29,0.19-0.48c0-0.26,0.15-0.61,0.45-1.03
+  c0.3-0.42,0.68-0.77,1.13-1.03c0.45-0.25,0.79-0.45,1.02-0.59c0.24-0.15,0.56-0.39,0.96-0.73c0.4-0.34,0.71-0.67,0.93-1
+  c0.22-0.33,0.41-0.75,0.58-1.26C23.91,13.17,24,12.61,24,12z M18.67,26v-4c0-0.19-0.06-0.36-0.19-0.48
+  c-0.13-0.12-0.29-0.19-0.48-0.19h-4c-0.19,0-0.35,0.06-0.48,0.19c-0.13,0.12-0.19,0.29-0.19,0.48v4c0,0.19,0.06,0.35,0.19,0.48
+  c0.12,0.12,0.28,0.19,0.48,0.19h4c0.19,0,0.35-0.06,0.48-0.19C18.6,26.35,18.67,26.2,18.67,26z"/></g></svg>
 {{ end }}

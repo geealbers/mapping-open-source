@@ -1,6 +1,8 @@
 ---
 title: Bar Chart
 type: page
+layout: about
+weight: 50
 date: 2018-10-29
 author: Greg Albers
 ---
@@ -44,6 +46,14 @@ Even if fewer new museums are joining GitHub, the overall number of repositories
 [[ INSERT IMAGE: Stacked bar chart of repos created by year ]]
 
 ## So, what are all these repositories? (Table & Pie chart)
+
+
+Not every repository has a single dominant language, but three languages make up more 50% of those repositories that do. They are JavaScript, Python, and PHP. Followed by HTML and CSS, and then a smattering of some __ others.
+
+__% of the repositories are forks, though as we’ll see, most of these are from non-museum sources.
+
+
+
 
 - What language they're written in
 - Keyword searches

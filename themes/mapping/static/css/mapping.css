@@ -353,11 +353,6 @@ td:nth-child(n+5) {
 
 /* Bar Chart */
 
-/* svg {
-    font: 10px sans-serif;
-    shape-rendering: crispEdges;
-  } */
-
 #barchart-container {
   display: flex;
   justify-content: center;
@@ -384,6 +379,28 @@ path.domain {
 
 .y .tick line {
   stroke: #505C5F;
+}
+
+/* Pie Chart */
+
+#pie-container g text {
+  font-size: 14px;
+}
+
+#pie-container {
+  margin-left: 320px;
+  margin-top: 80px;
+}
+
+#pie-container .highlighted {
+  fill: yellow !important;
+}
+
+#pie {
+  position: fixed;
+}
+#legend {
+  float: right;
 }
 
 /* Essay */

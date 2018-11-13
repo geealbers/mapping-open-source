@@ -1,0 +1,58 @@
+{{- range $.Site.Data.github -}}
+  {{- $.Page.Scratch.Add "types" (slice .type) -}}
+  {{- $.Page.Scratch.Add .type 1 -}}
+  {{ with .language }}
+    {{- $.Page.Scratch.Add "languages" (slice .) -}}
+    {{- $.Page.Scratch.Add . 1 -}}
+  {{ end }}
+  {{ with .license }}
+    {{- $.Page.Scratch.Add "licenses" (slice .) -}}
+    {{- $.Page.Scratch.Add . 1 -}}
+  {{ end }}
+  {{ with .size_span }}
+    {{- $.Page.Scratch.Add "sizes" (slice .) -}}
+    {{- $.Page.Scratch.Add . 1 -}}
+  {{ end }}
+  {{ with .owner_name }}
+    {{- $.Page.Scratch.Add "owners" (slice .) -}}
+    {{- $.Page.Scratch.Add . 1 -}}
+  {{ end }}
+{{- end -}}
+{{- $types := uniq ($.Page.Scratch.Get "types") -}}
+{{- $languages := uniq ($.Page.Scratch.Get "languages") -}}
+{{- $licenses := uniq ($.Page.Scratch.Get "licenses") -}}
+{{- $sizes := uniq ($.Page.Scratch.Get "sizes") -}}
+{{- $owners := uniq ($.Page.Scratch.Get "owners") -}}
+
+{
+"types": [
+{{ $lenTypes := len $types -}}
+{{ range $index, $element := $types -}}
+  {{ dict "label" . "count" ($.Page.Scratch.Get .) | jsonify }}{{- if eq (add $index 1) $lenTypes -}}{{ else }}, {{ end }}
+{{ end -}}
+],
+"languages": [
+{{ $lenLanguages := len $languages -}}
+{{ range $index, $element := $languages -}}
+  {{ dict "label" . "count" ($.Page.Scratch.Get .) | jsonify }}{{- if eq (add $index 1) $lenLanguages -}}{{ else }}, {{ end }}
+{{ end -}}
+],
+"licenses": [
+{{ $lenLicenses := len $licenses -}}
+{{ range $index, $element := $licenses -}}
+  {{ dict "label" . "count" ($.Page.Scratch.Get .) | jsonify }}{{- if eq (add $index 1) $lenLicenses -}}{{ else }}, {{ end }}
+{{ end -}}
+],
+"sizes": [
+{{ $lenSizes := len $sizes -}}
+{{ range $index, $element := $sizes -}}
+  {{ dict "label" . "count" ($.Page.Scratch.Get .) | jsonify }}{{- if eq (add $index 1) $lenSizes -}}{{ else }}, {{ end }}
+{{ end -}}
+],
+"owners": [
+{{ $lenOwners := len $owners -}}
+{{ range $index, $element := $owners -}}
+  {{ dict "label" . "count" ($.Page.Scratch.Get .) | jsonify }}{{- if eq (add $index 1) $lenOwners -}}{{ else }}, {{ end }}
+{{ end -}}
+]
+}

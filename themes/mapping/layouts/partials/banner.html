@@ -8,7 +8,7 @@
     <li class="current-page">
       {{- if eq $icon "network" }}{{ template "network" . -}}
       {{- else if eq $icon "table" }}{{ template "table" . }}
-      {{- else if eq $icon "barchart" }}{{ template "barchart" . }}{{ end -}}
+      {{- else if eq $icon "barchart" }}{{ template "barchart" . }}{{- else if eq $icon "piechart" }}{{ template "piechart" . }}{{ end -}}
       <span class="visually-hidden">{{ .Title }}</span>
     </li>
     {{ else }}
@@ -16,7 +16,7 @@
     <li>
       {{- if eq $icon "network" }}{{ template "network" . -}}
       {{- else if eq $icon "table" }}{{ template "table" . }}
-      {{- else if eq $icon "barchart" }}{{ template "barchart" . }}{{ end -}}
+      {{- else if eq $icon "barchart" }}{{ template "barchart" . }}{{- else if eq $icon "piechart" }}{{ template "piechart" . }}{{ end -}}
       <span class="visually-hidden">{{ .Title }}</span>
     </li>
     </a>
@@ -30,6 +30,8 @@
   {{ partial "banner-insert-table.html" . }}
   {{- else if eq .Page.Params.layout "barchart" -}}
   {{ partial "banner-insert-barchart.html" . }}
+  {{- else if eq .Page.Params.layout "piechart" -}}
+  {{ partial "banner-insert-piechart.html" . }}
   {{- end -}}
   <p class="updated">As of {{ dateFormat "Jan. 2, 2006" $.Site.Params.dataUpdated }}</p>
 </header>

@@ -1,4 +1,91 @@
-// Setup
+
+
+function chart(selected) {
+  document.getElementById("barchart-container")
+  d3.select("#bar-repos").remove();
+  d3.select("#bar-orgs").remove();
+  var type = selected.id
+  if (type == "repos") {
+    barRepos();
+    selector.enable();
+  } else if (type == "orgs") {
+    barOrgs();
+    selector.disable();
+  }
+}
+
+function barOrgs() {
+
+  var width = 900;
+  var height = 600;
+
+  var margin = {top: 20, right: 160, bottom: 35, left: 30};
+
+  var width = 960 - margin.left - margin.right,
+      height = 500 - margin.top - margin.bottom;
+
+  var svg = d3.select("#barchart-container")
+    .append("svg")
+    .attr("id", "bar-orgs")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  // Parse the date / time
+  var	parseDate = d3.time.format("%Y").parse;
+
+  var x = d3.scale.ordinal().rangeRoundBands([0, width], .05);
+
+  var y = d3.scale.linear().range([height, 0]);
+
+  var xAxis = d3.svg.axis()
+      .scale(x)
+      .orient("bottom")
+      .tickFormat(d3.time.format("%Y"));
+
+  var yAxis = d3.svg.axis()
+      .scale(y)
+      .orient("left")
+      .ticks(10)
+      .tickSize(-width, 0, 0)
+      .tickFormat( function(d) { return d } );
+
+  d3.json("../barchart.json", function(error, data) {
+    if (error) throw error;
+
+      data.joining.forEach(function(d) {
+          d.year = parseDate(d.year);
+          d.count = +d.count;
+      });
+
+    x.domain(data.joining.map(function(d) { return d.year; }));
+    y.domain([0, d3.max(data.joining, function(d) { return d.count; })]);
+
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
+
+    svg.selectAll("bar")
+        .data(data.joining)
+        .enter()
+        .append("rect")
+        .style("fill", "#3ba9ba")
+        .attr("x", function(d) { return x(d.year); })
+        .attr("width", x.rangeBand())
+        .attr("y", function(d) { return y(d.count); })
+        .attr("height", function(d) { return height - y(d.count); });
+
+  });
+
+}
+
+function barRepos() {
 
 var width = 900;
 var height = 600;
@@ -10,6 +97,7 @@ var width = 960 - margin.left - margin.right,
 
 var svg = d3.select("#barchart-container")
   .append("svg")
+  .attr("id", "bar-repos")
   .attr("width", width + margin.left + margin.right)
   .attr("height", height + margin.top + margin.bottom)
   .append("g")
@@ -25,7 +113,7 @@ d3.json("../barchart.json", function(error, data) {
 
   // Transpose the data into layers
   var dataset = d3.layout.stack()(owners.map(function(owner) {
-    return data.map(function(d) {
+    return data.repos.map(function(d) {
       return {x: parse(d.year), y: +d[owner], class: owner};
     });
   }));
@@ -66,7 +154,6 @@ d3.json("../barchart.json", function(error, data) {
   var colors = randomColor({
      count: ownerCount,
      hue: '#8ADDEA'
-
   });
 
   // Create groups for each series, rects for each segment
@@ -131,12 +218,14 @@ d3.json("../barchart.json", function(error, data) {
 
 })
 
+}
+
 // set up the dropdown select with Selectr
 // https://github.com/Mobius1/Selectr
 var selector = new Selectr("#owners", {
   defaultSelected: false,
   clearable: true,
-  placeholder: "GitHub organization name ...",
+  placeholder: "Organization ...",
 });
 
 selector.clear();

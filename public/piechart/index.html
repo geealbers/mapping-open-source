@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Mapping Open Source in Museums: Bar Chart</title>
+    <title>Mapping Open Source in Museums: Pie Chart</title>
     <link rel="stylesheet" href="../css/selectr.min.css">
     <link rel="stylesheet" href="../css/cooperhewitt-font.css">
     <link rel="stylesheet" href="../css/mapping.css">
@@ -18,22 +18,22 @@
   
   
     
-    <li class="current-page">
+    <a href="https://geealbers.github.io/mapping-open-source/barchart/">
+    <li>
 <svg viewBox="0 0 32 32" class="barchart-icon"><g><path d="M32,28H0V4h2v22h30V28z M10,24H6v-8h4V24z M16,24h-4V8h4V24z M22,24h-4V12h4V24z M28,24h-4V6h4V24z"/></g></svg>
 <span class="visually-hidden">Bar Chart</span>
     </li>
+    </a>
     
   
   
   
   
     
-    <a href="https://geealbers.github.io/mapping-open-source/piechart/">
-    <li>
+    <li class="current-page">
 <svg viewBox="0 0 32 32" class="piechart-icon"><g><path d="M24.3,27.2c-2.6,2.6-6.2,4.2-10.1,4.2C6.4,31.4,0,25,0,17.2S6.4,3,14.2,3v14.1L24.3,27.2z M16.6,14.8V0.6 c7.9,0,14.2,6.4,14.2,14.2H16.6z M32,17.2c0,3.9-1.6,7.5-4.2,10.1L17.7,17.2H32z"/></g></svg>
 <span class="visually-hidden">Pie Chart</span>
     </li>
-    </a>
     
   
   
@@ -92,12 +92,15 @@
   
   
   
-  </ul><p>Repositories and organizations by year</p>
-<div>
-  <form class="chart-select">
-    <input type="radio" name="bar" id="orgs" onchange="chart(this)"> Year Orgs Joined<br>
-    <input type="radio" name="bar" id="repos" onchange="chart(this)"> Year Repos Created<br>
-  </form><select id="owners" onchange="highlightOwner()"><option value="0">ACMILabs</option><option value="1">ACMTX</option><option value="2">AdlerPlanetarium</option><option value="3">AucklandMuseum</option><option value="4">BNHM</option><option value="5">BarnesFoundation</option><option value="6">Beit-Hatfutsot</option><option value="7">BritishMuseum</option><option value="8">CMP-Studio</option><option value="9">ClevelandMuseumArt</option><option value="10">ColbyMuseum</option><option value="11">CurrentMuseum</option><option value="12">DenverArtMuseum</option><option value="13">DenverBotanicGardens</option><option value="14">FWMSH</option><option value="15">FreerSackler</option><option value="16">Guggenheim</option><option value="17">IMAmuseum</option><option value="18">IUAM</option><option value="19">MILEVMUS</option><option value="20">MKGHamburg</option><option value="21">MfN-Berlin</option><option value="22">MortonArb-ForestEcology</option><option value="23">Museum-of-Art-and-Digital-Entertainment</option><option value="24">MuseumOfContemporaryArtAUSTRALIA</option><option value="25">MuseumofModernArt</option><option value="26">NMAAHC</option><option value="27">NYSMuseum</option><option value="28">NationalGalleryOfArt</option><option value="29">NationalMuseumAustralia</option><option value="30">NationalMuseumofDenmark</option><option value="31">NationalmuseumSWE</option><option value="32">NaturalHistoryMuseum</option><option value="33">NordicMuseum</option><option value="34">PortlandArtMuseum</option><option value="35">Princeton-University-Art-Museum</option><option value="36">RBGKew</option><option value="37">SheddAquarium</option><option value="38">SlovakNationalGallery</option><option value="39">Smithsonian</option><option value="40">Statens-maritima-museer</option><option value="41">StatensMuseumforKunst</option><option value="42">TheScienceMuseum</option><option value="43">VizcayaMuseum</option><option value="44">WaltersArtMuseum</option><option value="45">american-art</option><option value="46">amnh</option><option value="47">art-institute-of-chicago</option><option value="48">artsbma</option><option value="49">artsmia</option><option value="50">blamcollective</option><option value="51">brooklynmuseum</option><option value="52">bsns-feedback</option><option value="53">camla</option><option value="54">cmhouston</option><option value="55">cmnh</option><option value="56">cmoa</option><option value="57">cooperhewitt</option><option value="58">cpmab</option><option value="59">digitalgamemuseum</option><option value="60">fieldmuseum</option><option value="61">gettypubs</option><option value="62">harvardartmuseums</option><option value="63">humanrights</option><option value="64">kalmarlansmuseum</option><option value="65">knreise</option><option value="66">lbmaorg</option><option value="67">lifeandscience</option><option value="68">lshSWE</option><option value="69">marinersmuseum</option><option value="70">metmuseum-medialab</option><option value="71">mfahouston</option><option value="72">mjh-nyc</option><option value="73">monticello-railway-museum</option><option value="74">mosboston</option><option value="75">mplusmuseum</option><option value="76">mus-nature-ca</option><option value="77">museum-of-vertebrate-zoology</option><option value="78">museumofappliedartsandsciences</option><option value="79">museumofoldandnewart</option><option value="80">museumsvictoria</option><option value="81">nasjonalmuseet</option><option value="82">nationalmuseum</option><option value="83">ngv</option><option value="84">philamuseum</option><option value="85">pittsburghkids</option><option value="86">pmns</option><option value="87">rbgvictoria</option><option value="88">riksantikvarieambetet</option><option value="89">rubinmusuem</option><option value="90">scimusmn</option><option value="91">sfmoma</option><option value="92">tategallery</option><option value="93">te-papa</option><option value="94">thegetty</option><option value="95">thewarholmuseum</option><option value="96">uamz-vertnet</option><option value="97">usnationalarchives</option><option value="98">vanda</option><option value="99">walkerart</option><option value="100">wamuseum</option><option value="101">wcmaart</option><option value="102">wellcometrust</option><option value="103">whitneymuseum</option><option value="104">ycba-cia</option></select>
+  </ul><div>
+  <p>Characteristics across all repositories</p>
+  <select id="chart-options" onchange="drawPie()">
+    <option value="languages">Languages</option>
+    <option value="licenses">Licenses</option>
+    <option value="owners">Owners</option>
+    <option value="sizes">Sizes</option>
+    <option value="types">Types</option>
+  </select>
 </div>
 <p class="updated">As of Oct. 21, 2018</p>
 </header>
@@ -114,16 +117,15 @@
 
 
 
-<div id="barchart-container">
-  <script src="../js/d3.min.js" charset="utf-8"></script>
+<div id="pie-container">
+  <script src="../js/d3.v4.13.min.js" charset="utf-8"></script>
   <script src="../js/selectr.min.js" charset="utf-8"></script>
   <script src="../js/randomColor.js" charset="utf-8"></script>
-  <script src="../js/barchart.js" charset="utf-8"></script>
+  <script src="../js/piechart.js" charset="utf-8"></script>
   <script type="text/javascript">
     window.onload = function() {
-      barOrgs();
-      selector.disable();
-      document.getElementById("orgs").checked = true;
+      drawPie("languages");
+      selector.setValue('languages');
     };
   </script>
 </div>

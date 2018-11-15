@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'CooperHewitt';
+  src: 	url('../fonts/CooperHewitt-Bold.eot');
+  src:	url('../fonts/CooperHewitt-Bold.eot?#iefix') format("embedded-opentype"),
+        url('../fonts/CooperHewitt-Bold.woff') format('woff'),
+        url('../fonts/CooperHewitt-Bold.svg') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CooperHewitt';
+  src: 	url('../fonts/CooperHewitt-BoldItalic.eot');
+  src:	url('../fonts/CooperHewitt-BoldItalic.eot?#iefix') format("embedded-opentype"),
+        url('../fonts/CooperHewitt-BoldItalic.woff') format('woff'),
+        url('../fonts/CooperHewitt-BoldItalic.svg') format('svg');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'CooperHewitt';
+  src: 	url('../fonts/CooperHewitt-Medium.eot');
+  src:	url('../fonts/CooperHewitt-Medium.eot?#iefix') format("embedded-opentype"),
+        url('../fonts/CooperHewitt-Medium.woff') format('woff'),
+        url('../fonts/CooperHewitt-Medium.svg') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CooperHewitt';
+  src: 	url('../fonts/CooperHewitt-MediumItalic.eot');
+  src:	url('../fonts/CooperHewitt-MediumItalic.eot?#iefix') format("embedded-opentype"),
+        url('../fonts/CooperHewitt-MediumItalic.woff') format('woff'),
+        url('../fonts/CooperHewitt-MediumItalic.svg') format('svg');
+  font-weight: 500;
+  font-style: italic;
+}

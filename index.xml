@@ -2,56 +2,84 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mapping Open Source in Museums</title>
-    <link>https://geealbers.github.io/museums-on-github/</link>
+    <link>https://geealbers.github.io/mapping-open-source/</link>
     <description>Recent content on Mapping Open Source in Museums</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 29 Oct 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geealbers.github.io/museums-on-github/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://geealbers.github.io/mapping-open-source/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bar Chart</title>
-      <link>https://geealbers.github.io/museums-on-github/barchart/</link>
+      <link>https://geealbers.github.io/mapping-open-source/barchart/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://geealbers.github.io/museums-on-github/barchart/</guid>
+      <guid>https://geealbers.github.io/mapping-open-source/barchart/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Bar Chart JSON</title>
-      <link>https://geealbers.github.io/museums-on-github/barchart.json</link>
+      <title>Pie Chart</title>
+      <link>https://geealbers.github.io/mapping-open-source/piechart/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://geealbers.github.io/museums-on-github/barchart.json</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Network</title>
-      <link>https://geealbers.github.io/museums-on-github/network/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://geealbers.github.io/museums-on-github/network/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Network Graph JSON</title>
-      <link>https://geealbers.github.io/museums-on-github/network.json</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://geealbers.github.io/museums-on-github/network.json</guid>
+      <guid>https://geealbers.github.io/mapping-open-source/piechart/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Table</title>
-      <link>https://geealbers.github.io/museums-on-github/table/</link>
+      <link>https://geealbers.github.io/mapping-open-source/table/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://geealbers.github.io/museums-on-github/table/</guid>
+      <guid>https://geealbers.github.io/mapping-open-source/table/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Network</title>
+      <link>https://geealbers.github.io/mapping-open-source/network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geealbers.github.io/mapping-open-source/network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bar Chart</title>
+      <link>https://geealbers.github.io/mapping-open-source/analysis/</link>
+      <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://geealbers.github.io/mapping-open-source/analysis/</guid>
+      <description>Welcome to the Mapping Open Source in Museums project. This is an effort to understand the use and creation of open source code within the museum community. The project focuses specifically on exploring code written by museums and used by other museums, rather than on museums’s use on other open source projects. We also focus much of the study on sharing done on GitHub, as the most dominant open source platform.</description>
+    </item>
+    
+    <item>
+      <title>Bar Chart JSON</title>
+      <link>https://geealbers.github.io/mapping-open-source/barchart.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geealbers.github.io/mapping-open-source/barchart.json</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Network Graph JSON</title>
+      <link>https://geealbers.github.io/mapping-open-source/network.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geealbers.github.io/mapping-open-source/network.json</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pie Chart JSON</title>
+      <link>https://geealbers.github.io/mapping-open-source/piechart.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geealbers.github.io/mapping-open-source/piechart.json</guid>
       <description></description>
     </item>
     

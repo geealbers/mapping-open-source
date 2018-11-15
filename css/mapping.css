@@ -6,7 +6,7 @@ White: white
 Blues: #F4FBFD, #B4E9F1, #8ADDEA, #7EC9D5
 Reds: red
 Yellows: yellow
-Grays: #8C9799, #505C5F
+Grays: #F4F5F5, #8C9799, #505C5F
 Black: #171A21
 */
 
@@ -15,14 +15,16 @@ Black: #171A21
 
 body {
   margin: 0;
-  font-family: sans-serif;
-  font-size: 12px;
+  font-family: CooperHewitt, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
   line-height: 1.5;
   color: #171A21;
+  background-color: #F4F5F5;
 }
 
 h1 {
-  font-family: serif;
+  /* font-family: serif; */
   font-size: 2rem;
   line-height: 1.2;
   margin: 0;
@@ -52,6 +54,7 @@ header {
   border: 4px solid #505C5F;
   border-radius: 6px;
   background-color: white;
+  color: #505C5F;
 }
 
 header ul[aria-role="nav"] {
@@ -65,7 +68,7 @@ header ul[aria-role="nav"] li {
   display: block;
   float: left;
   padding: 6px;
-  margin-right: 8px;
+  margin-right: 4px;
   background-color: #8ADDEA;
   border-radius: 3px;
 }
@@ -94,6 +97,7 @@ header p.updated {
   font-style: italic;
   margin-bottom: 8px;
   margin-top: 22px;
+  font-size: .75rem;
 }
 
 header dl {
@@ -112,33 +116,62 @@ header select {
   margin-bottom: 10px;
 }
 
+.selectr-selected {
+  padding-top: 9px;
+  border: 2px solid #8C9799;
+}
+.selectr-placeholder,
+.selectr-label {
+  color: #505C5F;
+}
+
 header button,
 header input[type="text"] {
   margin-bottom: 10px;
   margin-right: 7px;
-  padding: 7px;
-  border: 1px solid #8C9799;
+  border: 2px solid #8C9799;
   border-radius: 3px;
   min-width: 28px;
   background-color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #505C5F;
+  width: 2rem;
+  height: 2rem;
 }
 
-header input [type="checkbox"] {
-  margin-right: 6px;
+header input[type="text"] {
+  padding: 10px;
+  font-weight: 500;
 }
+
+header input[type="checkbox"] {
+  margin-right: 4px;
+}
+
 
 header input.search {
-  width: 180px;
+  width: 174px;
   height: 21px;
   margin-bottom: 3px;
+  font-size: 1rem;
+}
+
+::placeholder {
+    color: #505C5F;
+    opacity: 1;
+}
+:-ms-input-placeholder {
+    color: #505C5F;
+}
+::-ms-input-placeholder {
+    color: #505C5F;
 }
 
 header form p {
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: .9em;
   text-align: right;
   padding-right: 3px;
+  color: #8C9799;
 }
 
 /* Network Graph */
@@ -259,7 +292,6 @@ table {
   text-align: left;
   width: 100%;
   table-layout: fixed;
-  font-size: 14px;
   border-collapse: collapse;
 }
 
@@ -299,7 +331,7 @@ th {
   vertical-align: middle;
   vertical-align: bottom;
   padding: 20px 0;
-  background-color: white;
+  background-color: #F4F5F5;
   color: red;
   height: 60px;
   border-bottom: 1px solid red;
@@ -353,11 +385,6 @@ td:nth-child(n+5) {
 
 /* Bar Chart */
 
-/* svg {
-    font: 10px sans-serif;
-    shape-rendering: crispEdges;
-  } */
-
 #barchart-container {
   display: flex;
   justify-content: center;
@@ -365,7 +392,7 @@ td:nth-child(n+5) {
   margin-top: 100px;
 }
 #barchart-container svg g {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 #barchart-container .highlighted {
@@ -386,3 +413,104 @@ path.domain {
   stroke: #505C5F;
 }
 
+form.chart-select {
+  margin-bottom: 1em;
+}
+
+/* Pie Chart */
+
+#pie-container g text {
+  font-size: 16px;
+}
+
+#pie-container {
+  margin-left: 320px;
+  margin-top: 80px;
+}
+
+#pie-container .highlighted {
+  fill: yellow !important;
+}
+
+#pie {
+  position: fixed;
+}
+#legend {
+  float: right;
+  margin-right: 20px;
+}
+
+/* Essay */
+
+.essay {
+  font-size: 21px;
+  font-family: serif;
+  margin-top: 20px;
+  margin-left: 328px;
+  max-width: 680px;
+}
+
+.essay .header {
+  margin-bottom: 140px;
+  color: #8C9799;
+}
+
+.essay .header p {
+  margin: 0;
+}
+
+.essay a {
+  color: #171A21;
+  text-decoration: none;
+  border-bottom: 3px solid #8ADDEA;
+}
+
+.essay blockquote {
+  font-style: italic;
+}
+
+.essay blockquote em {
+  font-style: normal;
+}
+
+.essay dl {
+  margin-right: 2em;
+}
+
+.essay dt {
+  font-weight: bold;
+  border-left: 1px solid #8C9799;
+  border-top: 1px solid #8C9799;
+  border-right: 1px solid #8C9799;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding-left: 1em;
+  padding-top: 1em;
+  padding-right: 1em;
+}
+
+.essay dd {
+  margin-left: 0;
+  margin-bottom: 1em;
+  border-left: 1px solid #8C9799;
+  border-bottom: 1px solid #8C9799;
+  border-right: 1px solid #8C9799;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  padding-right: 1em;
+}
+
+.essay sup,
+.essay sub {
+  line-height: 0;
+}
+
+.essay sup a,
+.essay sub a {
+  border-bottom-width: 0;
+  background-color: yellow;
+  padding: 0 .2em;
+  border-radius: .2em;
+}

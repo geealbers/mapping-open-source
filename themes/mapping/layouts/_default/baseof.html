@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>{{ .Site.Title }}{{ with .Page.Title }}: {{ . }}{{ end }}</title>
-    <link rel="stylesheet" href="../css/selectr.min.css">
-    <link rel="stylesheet" href="../css/cooperhewitt-font.css">
-    <link rel="stylesheet" href="../css/mapping.css">
+    <link rel="stylesheet" href="{{ "css/selectr.min.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/cooperhewitt-font.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/mapping.css" | relURL }}">
   </head>
   <body id="mapping">
     <!-- GitHub link by https://github.com/tholman/github-corners -->

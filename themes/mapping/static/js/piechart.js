@@ -1,6 +1,6 @@
 function drawPie(chart) {
 
-var radius = 250;
+var radius = 300;
 var legend = 200;
 var width = radius * 2;
 var donutWidth = radius * .8;

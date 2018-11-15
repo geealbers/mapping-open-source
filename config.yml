@@ -4,7 +4,7 @@
 
 title: "Mapping Open Source in Museums"
 languageCode: "en-us"
-baseURL: "https://geealbers.github.io/museums-on-github"
+baseURL: "https://geealbers.github.io/mapping-open-source"
 canonifyURLs: true
 relativeURLs: false
 theme: "mapping"

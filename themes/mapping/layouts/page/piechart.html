@@ -1,0 +1,15 @@
+{{ define "main" }}
+{{ partial "banner.html" . }}
+<div id="pie-container">
+  <script src="../js/d3.v4.13.min.js" charset="utf-8"></script>
+  <script src="../js/selectr.min.js" charset="utf-8"></script>
+  <script src="../js/randomColor.js" charset="utf-8"></script>
+  <script src="../js/piechart.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    window.onload = function() {
+      drawPie("languages");
+      selector.setValue('languages');
+    };
+  </script>
+</div>
+{{ end }}

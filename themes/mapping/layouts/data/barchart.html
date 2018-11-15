@@ -1,0 +1,99 @@
+{{- range $.Site.Data.github -}}
+  {{- $year := dateFormat "2006" .date_created -}}
+  {{- $.Page.Scratch.Add "year-array" (slice $year) -}}
+{{- end -}}
+{{- $years := uniq ($.Page.Scratch.Get "year-array") | sort -}}
+
+{{- range $.Site.Data.github -}}
+  {{- $.Page.Scratch.Add "owners" (slice .owner_name) -}}
+{{- end -}}
+{{- $owners := uniq ($.Page.Scratch.Get "owners") -}}
+
+{{/*
+
+  Code to create the joining JSON, that I thought should work but didn't:
+
+  {{- range $.Site.Data.github -}}
+    {{- $year := dateFormat "2006" .date_created -}}
+    {{- $.Page.Scratch.SetInMap "owner-years" .owner_name $year -}}
+  {{- end -}}
+
+  {{ $.Page.Scratch.Get "owner-years" }}
+
+  {{- range ($.Page.Scratch.GetSortedMapValues "owner-years") -}}
+    {{- $.Page.Scratch.Add . 1 -}}
+    {{- $.Page.Scratch.Add "joined-year-array" (slice .) -}}
+  {{- end -}}
+  {{- $joinedYears := uniq ($.Page.Scratch.Get "joined-year-array") | sort -}}
+
+  {{ $lenJoinedYears := len $joinedYears -}}
+  {{ range $index, $element := $joinedYears -}}
+    {{ dict "year" . "count" ($.Page.Scratch.Get .) | jsonify }}{{- if eq (add $index 1) $lenJoinedYears -}}{{ else }}, {{ end }}
+  {{ end -}}
+
+*/}}
+
+{
+"repos": [
+{{- $lenYears := len $years -}}
+{{- range $index, $element := $years -}}
+{{- $thisYear := . -}}
+{{- $.Page.Scratch.SetInMap $thisYear "year" $thisYear -}}
+{{- range $.Site.Data.github }}
+  {{- $repoYear := dateFormat "2006" .date_created -}}
+  {{- $owner := .owner_name -}}
+  {{ $count := printf "%s-%s" $owner $thisYear }}
+  {{- if eq $repoYear $thisYear -}}
+    {{- $.Page.Scratch.Add $count 1 -}}
+    {{- $.Page.Scratch.SetInMap $thisYear $owner ($.Page.Scratch.Get $count) -}}
+  {{- else -}}
+  {{- $.Page.Scratch.Add $count 0 -}}
+    {{- $.Page.Scratch.SetInMap $thisYear $owner ($.Page.Scratch.Get $count) -}}
+  {{- end -}}
+{{- end }}
+  {{ $.Page.Scratch.Get $thisYear | jsonify }}{{- if eq (add $index 1) $lenYears -}}{{ else }}, {{ end }}
+{{ end -}}
+],
+"joining": [
+{
+  "count": 0,
+  "year": "2009"
+},
+{
+  "count": 3,
+  "year": "2010"
+},
+{
+  "count": 7,
+  "year": "2011"
+},
+{
+  "count": 9,
+  "year": "2012"
+},
+{
+  "count": 14,
+  "year": "2013"
+},
+{
+  "count": 20,
+  "year": "2014"
+},
+{
+  "count": 22,
+  "year": "2015"
+},
+{
+  "count": 20,
+  "year": "2016"
+},
+{
+  "count": 18,
+  "year": "2017"
+},
+{
+  "count": 3,
+  "year": "2018"
+}
+]
+}

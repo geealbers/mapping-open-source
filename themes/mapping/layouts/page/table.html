@@ -1,0 +1,64 @@
+{{ define "main" }}
+{{ partial "banner.html" . }}
+{{ $github := "https://github.com" }}
+<div id="repos_table">
+  <table>
+    <thead class="table-controls">
+      <tr>
+        <th class="col-3">
+          <a href="javascript:void(0);" class="sort" data-sort="repository" data-insensitive="true">{{ template "sort-icon" . }} Repository</a>
+        </th>
+        <th class="col-3">
+          <a href="javascript:void(0);" class="sort" data-sort="source" data-insensitive="true">{{ template "sort-icon" . }} Source</a>
+        </th>
+        <th class="col-4">
+          <span class="sort no-sort" data-sort="description" data-insensitive="true">Description</span>
+        </th>
+        <th class="col-2">
+          <a href="javascript:void(0);" class="sort" data-sort="language" data-insensitive="true">{{ template "sort-icon" . }} Language</a>
+        </th>
+        <th class="col-2">
+          <a href="javascript:void(0);" class="sort" data-sort="update" data-insensitive="true">{{ template "sort-icon" . }} Updated</a>
+        </th>
+        <th class="col-1">
+          <a href="javascript:void(0);" class="sort" data-sort="stars" data-insensitive="true">{{ template "sort-icon" . }} Stars</a>
+        </th>
+        <th class="col-1">
+          <a href="javascript:void(0);" class="sort" data-sort="forks" data-insensitive="true">{{ template "sort-icon" . }} Forks</a>
+        </th>
+      </tr>
+    </thead>
+    <tbody class="list">
+      {{ range $.Site.Data.github }}
+      <tr>
+        <td class="repository col-3"><a href="{{ $github }}/{{ .owner_name }}/{{ .name }}" target="_blank">{{ .name }}</a>{{ if eq .type "Fork" }} <span class="fork-marker">*</span>{{ end }}</td>
+        <td class="source col-3">{{ .owner_name }}</td>
+        <td class="description col-4">{{ .description }}</td>
+        <td class="language col-2">{{ if .language }}{{ .language }}{{ else }}Unknown{{ end }}</td>
+        <td class="update col-2">{{ template "date" . }}</td>
+        <td class="stars col-1">{{ .stars }}</td>
+        <td class="forks col-1">{{ .forks }}</td>
+      </tr>
+      {{ end }}
+    <tbody>
+  </table>
+  <script src="../js/jquery-2.1.3.min.js" charset="utf-8"></script>
+  <script src="../js/jquery.stickytableheaders.min.js" charset="utf-8"></script>
+  <script src="../js/list.js" charset="utf-8"></script>
+  <script src="../js/set_up_table.js" charset="utf-8"></script>
+  <script>
+    $(document).ready(function(){
+      setUpTable();
+    });
+  </script>
+</div>
+{{ end }}
+
+{{ define "date" }}
+{{ $t := time .date_pushed }}
+{{ $t.Year}}
+{{ end }}
+
+{{ define "sort-icon" }}
+<svg viewBox="0 0 32 32" class="sort-icon"><g><path d="M26.2,13.1H5.8c-0.8,0-1.5-0.7-1.5-1.5c0-0.4,0.2-0.8,0.4-1L15,0.4C15.2,0.2,15.6,0,16,0s0.8,0.2,1,0.4l10.2,10.2 c0.3,0.3,0.4,0.6,0.4,1C27.6,12.4,27,13.1,26.2,13.1z M27.2,21.4L17,31.6c-0.3,0.3-0.6,0.4-1,0.4s-0.8-0.2-1-0.4L4.8,21.4 c-0.3-0.3-0.4-0.6-0.4-1c0-0.8,0.7-1.5,1.5-1.5h20.4c0.8,0,1.5,0.7,1.5,1.5C27.6,20.7,27.5,21.1,27.2,21.4z"/></g></svg>
+{{ end }}

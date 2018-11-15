@@ -1,0 +1,388 @@
+/*
+color palette and shades used (light to dark)
+https://coolors.co/8addea-ff0000-ffff00-505c5f-171a21
+
+White: white
+Blues: #F4FBFD, #B4E9F1, #8ADDEA, #7EC9D5
+Reds: red
+Yellows: yellow
+Grays: #8C9799, #505C5F
+Black: #171A21
+*/
+
+
+/* Base */
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #171A21;
+}
+
+h1 {
+  font-family: serif;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.visually-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+/* Page Banner */
+
+header {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 20px 20px 0 20px;
+  z-index: 10;
+  width: 200px;
+  border: 4px solid #505C5F;
+  border-radius: 6px;
+  background-color: white;
+}
+
+header ul[aria-role="nav"] {
+  display: inline-block;
+  padding-left: 0;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+header ul[aria-role="nav"] li {
+  display: block;
+  float: left;
+  padding: 6px;
+  margin-right: 8px;
+  background-color: #8ADDEA;
+  border-radius: 3px;
+}
+
+header ul[aria-role="nav"] li svg,
+header ul[aria-role="nav"] a:hover li svg {
+  fill: red;
+  width: 1.5em;
+  float: left;
+}
+
+header ul[aria-role="nav"] a li {
+  background-color: #8ADDEA;
+}
+
+header ul[aria-role="nav"] a li svg {
+  fill: white;
+}
+
+header p {
+  margin-top: 0;
+}
+
+header p.updated {
+  color: #8C9799;
+  font-style: italic;
+  margin-bottom: 8px;
+  margin-top: 22px;
+}
+
+header dl {
+  margin-top: 10px;
+}
+
+header dt {
+  float: left;
+}
+
+header dd {
+  margin-left: 20px;
+}
+
+header select {
+  margin-bottom: 10px;
+}
+
+header button,
+header input[type="text"] {
+  margin-bottom: 10px;
+  margin-right: 7px;
+  padding: 7px;
+  border: 1px solid #8C9799;
+  border-radius: 3px;
+  min-width: 28px;
+  background-color: white;
+}
+
+header input [type="checkbox"] {
+  margin-right: 6px;
+}
+
+header input.search {
+  width: 180px;
+  height: 21px;
+  margin-bottom: 3px;
+}
+
+header form p {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: .9em;
+  text-align: right;
+  padding-right: 3px;
+}
+
+/* Network Graph */
+
+#loading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #8C9799;
+  opacity: 1;
+  z-index: 1;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: opacity 2s; /* Safari */
+  transition: opacity 2s;
+}
+
+g {
+  font-size: 4px;
+}
+
+g line {
+  stroke: #8C9799;
+  stroke-opacity: .2;
+  stroke-width: 1;
+}
+
+g line.fork-edge {
+  stroke: red;
+  stroke-opacity: 1;
+}
+
+g.contributor circle {
+  fill: #8ADDEA;
+}
+
+g.organization circle {
+  fill: red;
+}
+
+g circle.highlighted,
+g line.highlighted {
+  stroke: yellow;
+  stroke-width: 1;
+  stroke-opacity: 1;
+}
+
+g.contributor text {
+  fill: #505C5F;
+}
+
+g.organization text {
+  fill: red;
+}
+
+.box {
+  overflow: visible;
+}
+
+.box div {
+  background-color: white;
+  padding: 2px;
+  border: 1px solid #505C5F;
+  border-radius: 3px;
+}
+
+.box h3 {
+  margin: 2px 2px 0 2px;
+  text-transform: uppercase;
+  color: #505C5F;
+}
+
+.box p {
+  margin-left: 2px;
+  margin-top: 0;
+  font-style: italic;
+}
+
+.box div.button {
+  color: #505C5F;
+  height: 6px;
+  width: 6px;
+  float: right;
+  text-align: red;
+  padding: 0;
+  margin: 0;
+  border-width: 0;
+  font-size: 8px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.box div ul {
+  padding-left: 0;
+  margin: 3px 6px;
+}
+
+.box li {
+  margin-bottom: 2px;
+}
+
+.box a {
+  color: #505C5F;
+}
+
+.box ul a {
+  color: red;
+}
+
+
+/* Table */
+
+table {
+  text-align: left;
+  width: 100%;
+  table-layout: fixed;
+  font-size: 14px;
+  border-collapse: collapse;
+}
+
+table a {
+  color: #171A21;
+  text-decoration: none;
+  border-bottom: 3px solid #8ADDEA;
+}
+
+table a:hover {
+  border-bottom-color: #7EC9D5;
+}
+
+table tbody tr:first-child td {
+  padding-top: 20px;
+}
+
+tr:hover {
+  background-color: #F4FBFD;
+}
+
+th, td {
+   border-bottom: 1px solid #B4E9F1;
+   vertical-align: top;
+   padding: 10px 4px 10px 0;
+}
+
+td {
+  padding: 14px 4px 14px 0;
+}
+
+span.fork-marker {
+  color: red;
+}
+
+th {
+  vertical-align: middle;
+  vertical-align: bottom;
+  padding: 20px 0;
+  background-color: white;
+  color: red;
+  height: 60px;
+  border-bottom: 1px solid red;
+}
+
+th svg.sort-icon {
+  height: 1em;
+  width: 1em;
+  margin-bottom: -2px;
+  fill: red;
+}
+
+th a {
+  color: red;
+  text-decoration: none;
+  border-bottom-width: 0;
+  background-color: inherit;
+}
+
+th a:hover {
+  opacity: .8;
+}
+
+th.col-1 {
+  width: 6%;
+}
+
+th.col-2 {
+  width: 8%;
+}
+
+th.col-3 {
+  width: 12%;
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 288px;
+  width: 200px;
+}
+th:last-child,
+td:last-child {
+  padding-right: 20px;
+  width: 6%;
+}
+
+th:nth-child(n+5),
+td:nth-child(n+5) {
+  text-align: center;
+}
+
+/* Bar Chart */
+
+/* svg {
+    font: 10px sans-serif;
+    shape-rendering: crispEdges;
+  } */
+
+#barchart-container {
+  display: flex;
+  justify-content: center;
+  margin-left: 280px;
+  margin-top: 100px;
+}
+#barchart-container svg g {
+  font-size: 12px;
+}
+
+#barchart-container .highlighted {
+  fill: yellow;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+}
+
+path.domain {
+  stroke: none;
+}
+
+.y .tick line {
+  stroke: #505C5F;
+}
+

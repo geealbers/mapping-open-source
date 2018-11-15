@@ -1,0 +1,99 @@
+{{/*
+  for every repo, range through the contributors and add any owners of repos they belong to into an array keyed to their name, also create an array of repo names for each contributors
+  */}}
+{{- range $.Site.Data.github -}}
+  {{- $owner_name := .owner_name -}}
+  {{- $repo_name := .name_full -}}
+  {{- range .contributor -}}
+    {{ $nameRepos := add .name "-repos"}}
+    {{- $.Page.Scratch.Add .name (slice $owner_name) -}}
+    {{- $.Page.Scratch.Add $nameRepos (slice $repo_name) -}}
+  {{- end }}
+{{- end -}}
+
+{{/*
+  add contributor name from every repo to an array, and then filter for uniques; also add up their contributions and add the number to a key of their name plus "-contributions"
+  */}}
+{{- range $.Site.Data.github -}}
+  {{- range .contributor -}}
+    {{- $.Page.Scratch.Add "contributors" (slice .name) -}}
+    {{ $contributionName :=  printf "%s%s" .name "-contributions" -}}
+    {{- $.Page.Scratch.Add $contributionName .contributions -}}
+  {{- end }}
+{{- end -}}
+{{- $contributors := uniq ($.Page.Scratch.Get "contributors") -}}
+
+{{/*
+  for each repo, range through the contributors and add their name to an array keyed to the owner_name, also create an array of repo names
+  */}}
+{{- range $.Site.Data.github -}}
+  {{- $owner_name := .owner_name -}}
+  {{ $nameRepos := add .owner_name "-repos"}}
+  {{- $.Page.Scratch.Add $nameRepos (slice .name_full) -}}
+  {{- range .contributor -}}
+    {{- $.Page.Scratch.Add $owner_name (slice .name) -}}
+  {{- end -}}
+{{- end -}}
+
+{{/*
+  add owner name from every repo to an array, and then filter for uniques
+  */}}
+{{- range $.Site.Data.github -}}
+  {{- $.Page.Scratch.Add "owners" (slice .owner_name) -}}
+{{- end -}}
+{{- $owners := uniq ($.Page.Scratch.Get "owners") -}}
+
+{
+"nodes": [
+{{ $len := len $contributors -}}
+{{ range $index, $element := $contributors -}}
+  {{- $connections := uniq ($.Page.Scratch.Get .) | len -}}
+  {{- $contributionName :=  printf "%s%s" . "-contributions" -}}
+  {{- $contributions :=  $.Page.Scratch.Get $contributionName -}}
+  {{- $repos := $.Page.Scratch.Get (add . "-repos") -}}
+  {{ dict "id" . "type" "contributor" "contributor_to" $connections "contributions" $contributions "repos" $repos | jsonify }},
+{{ end -}}
+{{ $len := len $owners -}}
+{{ range $index, $element := $owners -}}
+{{- $repoCount := len (where $.Site.Data.github "owner_name" .) -}}
+{{- $contributorCount := uniq ($.Page.Scratch.Get .) | len -}}
+{{- $repos := $.Page.Scratch.Get (add . "-repos") -}}
+{{- $uniqueOwners := uniq ($.Page.Scratch.Get .) -}}
+{{- $x := delimit $uniqueOwners ", " -}}
+  {{ dict "id" . "type" "organization" "contributor_count" $contributorCount "repos" $repos | jsonify }}{{- if eq (add $index 1) $len -}}{{ else }}, {{ end }}
+{{ end -}}
+],
+"edges": [
+{{ range $index, $element := $.Site.Data.github -}}
+  {{- if eq .type "Fork" -}}
+  {{- $owners := uniq ($.Page.Scratch.Get "owners") -}}
+  {{- $id :=  printf "%s%v%s%s" "e" (add $index 1) "-" .owner_name -}}
+  {{- if in $owners .parent_name -}}
+  {{ dict "id" $id "source" .owner_name "target" .parent_name "type" "fork" | jsonify }},
+  {{ end -}}
+  {{- end -}}
+{{- end -}}
+{{ $lenRepos := len $.Site.Data.github -}}
+{{- range $index, $element := $.Site.Data.github -}}
+{{- $owner_name := .owner_name -}}
+{{- if eq (add $index 1) $lenRepos -}}
+{{ $lenContributor := len .contributor -}}
+{{- range $index, $element := .contributor -}}
+  {{- $id :=  printf "%s%v%s%s" "e" (add $index 1) "-" .name -}}
+  {{- $connections := uniq ($.Page.Scratch.Get .name) | len -}}
+  {{- $repoContributors := delimit ($.Page.Scratch.Get $owner_name) " " -}}
+  {{- $reposContributingTo := findRE .name $repoContributors | len -}}
+  {{ dict "id" $id "source" $owner_name "target" .name "type" "contribution" "contributor_to" $connections "size" $reposContributingTo | jsonify }}{{- if eq (add $index 1) $lenContributor -}}{{ else }}, {{ end }}
+{{ end -}}
+{{- else -}}
+{{- range .contributor -}}
+  {{- $id :=  printf "%s%v%s%s" "e" (add $index 1) "-" .name -}}
+  {{- $connections := uniq ($.Page.Scratch.Get .name) | len -}}
+  {{- $repoContributors := delimit ($.Page.Scratch.Get $owner_name) " " -}}
+  {{- $reposContributingTo := findRE .name $repoContributors | len -}}
+  {{ dict "id" $id "source" $owner_name "target" .name "type" "contribution" "contributor_to" $connections "size" $reposContributingTo | jsonify }},
+{{ end -}}
+{{- end -}}
+{{- end -}}
+]
+}

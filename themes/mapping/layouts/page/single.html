@@ -1,0 +1,12 @@
+{{ define "main" }}
+{{ partial "banner.html" . }}
+{{ with .Content }}
+<div class="essay">
+  <div class="header">
+    <p>{{ $.Page.Params.author }}</p>
+    <p><em>{{ dateFormat "January 2, 2006" $.Page.Date }}</em></p>
+  </div>
+  {{ . }}
+</div>
+{{ end }}
+{{ end }}

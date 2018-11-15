@@ -1,0 +1,16 @@
+{{/*
+  add owner name from every repo to an array, and then filter for uniques
+  */}}
+{{- range $.Site.Data.github -}}
+  {{- $.Page.Scratch.Add "owners" (slice .owner_name) -}}
+  {{- $.Page.Scratch.Add "languages" (slice .language) -}}
+  {{- $.Page.Scratch.Add "dates" (slice .date_created) -}}
+{{- end -}}
+{{- $owners := uniq ($.Page.Scratch.Get "owners") -}}
+{{- $languages := uniq ($.Page.Scratch.Get "languages") -}}
+{{- $date :=  index (sort ($.Page.Scratch.Get "dates")) 0 -}}
+<p>Listing of all <span id="number-of-repos">{{ len $.Site.Data.github }}</span> public repositories ( <span class="fork-marker">*</span> = forked from another source)</p>
+<form>
+  <input type="text" class="search" placeholder="Search ...">
+  <p><span class="results">{{ len $.Site.Data.github }}</span> Repos</p>
+</form>

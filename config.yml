@@ -1,0 +1,18 @@
+# Hugo configuration file
+# https://gohugo.io/
+# set for deployment to GitHub pages, using bin/deploy.sh
+
+title: "Mapping Open Source in Museums"
+languageCode: "en-us"
+baseURL: "https://geealbers.github.io/museums-on-github"
+canonifyURLs: true
+relativeURLs: false
+theme: "mapping"
+disableKinds:
+  - "sitemap"
+  - "taxonomy"
+  - "taxonomyTerm"
+metaDataFormat: "yaml"
+
+params:
+  dataUpdated: 2018-10-21

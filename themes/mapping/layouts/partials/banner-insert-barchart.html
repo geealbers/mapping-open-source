@@ -1,0 +1,16 @@
+<p>Repositories and organizations by year</p>
+<div>
+  <form class="chart-select">
+    <input type="radio" name="bar" id="orgs" onchange="chart(this)"> Year Orgs Joined<br>
+    <input type="radio" name="bar" id="repos" onchange="chart(this)"> Year Repos Created<br>
+  </form>
+  {{- range $.Site.Data.github -}}
+    {{- $.Page.Scratch.Add "owners" (slice .owner_name) -}}
+  {{- end -}}
+  {{- $owners := uniq ($.Page.Scratch.Get "owners") -}}
+  <select id="owners" onchange="highlightOwner()">
+    {{- range $index, $element := $owners -}}
+      <option value="{{ $index }}">{{ . }}</option>
+    {{- end -}}
+  </select>
+</div>

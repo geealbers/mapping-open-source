@@ -413,6 +413,10 @@ path.domain {
   stroke: #505C5F;
 }
 
+form.chart-select {
+  margin-bottom: 1em;
+}
+
 /* Pie Chart */
 
 #pie-container g text {

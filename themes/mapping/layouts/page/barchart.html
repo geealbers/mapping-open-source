@@ -5,5 +5,12 @@
   <script src="../js/selectr.min.js" charset="utf-8"></script>
   <script src="../js/randomColor.js" charset="utf-8"></script>
   <script src="../js/barchart.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    window.onload = function() {
+      barOrgs();
+      selector.disable();
+      document.getElementById("orgs").checked = true;
+    };
+  </script>
 </div>
 {{ end }}

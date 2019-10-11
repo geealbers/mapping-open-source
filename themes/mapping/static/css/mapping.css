@@ -514,3 +514,8 @@ form.chart-select {
   padding: 0 .2em;
   border-radius: .2em;
 }
+
+.essay p.updated {
+  color: #8C9799;
+  font-size: .75em;
+}

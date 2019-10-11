@@ -57,6 +57,16 @@ header {
   color: #505C5F;
 }
 
+header a,
+header a:active,
+header a:visited,
+header a:hover,
+header a:focus,
+header a:link {
+  color: #505C5F;
+  text-decoration: none;
+}
+
 header ul[aria-role="nav"] {
   display: inline-block;
   padding-left: 0;

@@ -13,6 +13,7 @@ Australia:
   - wamuseum
 
 Canada:
+  - UBCBBMCTC
   - uamz-vertnet
   - humanrights
   - mus-nature-ca
@@ -26,6 +27,8 @@ Finland:
   - FinnishNationalGallery
 
 Germany:
+  - deutsche-kinemathek
+  - MuseumBINARIUM
   - MfN-Berlin
   - MKGHamburg
 
@@ -45,9 +48,11 @@ New Zealand:
 Norway:
   - knreise
   - nasjonalmuseet
+  - vesterheim
 
 Poland:
   - nationalmuseum
+  - PolishHistoryMuseum
 
 Slovakia:
   - SlovakNationalGallery
@@ -67,6 +72,7 @@ United States:
   - ACMTX
   - thewarholmuseum
   - art-institute-of-chicago
+  - aum-vertnet
   - autrymuseum
   - balboaparkcollab
   - blamcollective
@@ -86,15 +92,20 @@ United States:
   - ColbyMuseum
   - cpmab
   - cooperhewitt
+  - CreativeDiscoveryMuseumMediaLab
+  - TheCubanMuseum
   - CurrentMuseum
   - DenverArtMuseum
   - DenverBotanicGardens
   - digitalgamemuseum
+  - dcmgit
   - IUAM
   - Exploratorium
   - fieldmuseum
   - FWMSH
   - FreerSackler
+  - CivilWarMuseum
+  - MuseumofHistory
   - gettypubs
   - HammerMuseum
   - harvardartmuseums
@@ -103,25 +114,31 @@ United States:
   - icamiami
   - thegetty
   - thejewishmuseum
+  - KimbellArt
   - lbmaorg
   - tenementmuseum
   - LACMA
+  - maineminerals
   - marinersmuseum
   - metmuseum-medialab
   - MetMuseumofArt
   - artsmia
+  - mitmuseumstudio
   - monticello-railway-museum
   - MortonArb-ForestEcology
   - Museum-of-Art-and-Digital-Entertainment
+  - museumofthebible
   - mcasd
   - mfaweb
   - mfahouston
   - mjh-nyc
   - lifeandscience
+  - mattressfactory
   - MuseumofModernArt
   - mosboston
   - museum-of-vertebrate-zoology
   - NationalGalleryOfArt
+  - ns11mm
   - nationalveteransartmuseum
   - NYSMuseum
   - IMAmuseum
@@ -137,17 +154,21 @@ United States:
   - smithsonian
   - NMAAHC
   - Guggenheim
+  - studiomuseum
   - CMP-Studio
   - usnationalarchives
+  - VMNH
   - VizcayaMuseum
   - walkerart
   - WaltersArtMuseum
+  - whalemuseum
   - whitneymuseum
   - wcmaart
   - ycba-cia
 
 United Kingdom:
   - BritishMuseum
+  - geffrye
   - NaturalHistoryMuseum
   - RBGKew
   - thesciencemuseum

@@ -1,0 +1,938 @@
+[
+  {
+    "owner_name": "ACMILabs",
+    "public_repos": 15,
+    "owner_created": "2015",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "museumofappliedartsandsciences",
+    "public_repos": 7,
+    "owner_created": "2012",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "MuseumOfContemporaryArtAUSTRALIA",
+    "public_repos": 2,
+    "owner_created": "2016",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "museumofoldandnewart",
+    "public_repos": 1,
+    "owner_created": "2017",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "museumsvictoria",
+    "public_repos": 22,
+    "owner_created": "2012",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "nationalgalleryofaustralia",
+    "public_repos": 0,
+    "owner_created": "2018",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "ngv",
+    "public_repos": 9,
+    "owner_created": "2009",
+    "owner_updated": "2017"
+  },
+  {
+    "owner_name": "NationalMuseumAustralia",
+    "public_repos": 2,
+    "owner_created": "2017",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "rbgvictoria",
+    "public_repos": 23,
+    "owner_created": "2015",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "wamuseum",
+    "public_repos": 5,
+    "owner_created": "2014",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "UBCBBMCTC",
+    "public_repos": 0,
+    "owner_created": "2013",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "uamz-vertnet",
+    "public_repos": 4,
+    "owner_created": "2015",
+    "owner_updated": "2015"
+  },
+  {
+    "owner_name": "humanrights",
+    "public_repos": 1,
+    "owner_created": "2014",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "McqOrg",
+    "public_repos": 2,
+    "owner_created": "2015",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "mus-nature-ca",
+    "public_repos": 16,
+    "owner_created": "2016",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "ROMtoronto",
+    "public_repos": 0,
+    "owner_created": "2014",
+    "owner_updated": "2014"
+  },
+  {
+    "owner_name": "NationalMuseumofDenmark",
+    "public_repos": 16,
+    "owner_created": "2013",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "StatensMuseumforKunst",
+    "public_repos": 6,
+    "owner_created": "2013",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "FinnishNationalGallery",
+    "public_repos": 0,
+    "owner_created": "2015",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "ina-foss",
+    "public_repos": 13,
+    "owner_created": "2014",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "museedelairetdelespace",
+    "public_repos": 0,
+    "owner_created": "2019",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "rmngp",
+    "public_repos": 3,
+    "owner_created": "2013",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "deutsche-kinemathek",
+    "public_repos": 2,
+    "owner_created": "2012",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "MuseumBINARIUM",
+    "public_repos": 0,
+    "owner_created": "2016",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "MfN-Berlin",
+    "public_repos": 53,
+    "owner_created": "2014",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "MKGHamburg",
+    "public_repos": 2,
+    "owner_created": "2016",
+    "owner_updated": "2017"
+  },
+  {
+    "owner_name": "mplusmuseum",
+    "public_repos": 6,
+    "owner_created": "2017",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "MILEVMUS",
+    "public_repos": 1,
+    "owner_created": "2015",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "Beit-Hatfutsot",
+    "public_repos": 31,
+    "owner_created": "2015",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "gemeentemuseum",
+    "public_repos": 1,
+    "owner_created": "2012",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "naturalis",
+    "public_repos": 384,
+    "owner_created": "2012",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "Rijksmuseum",
+    "public_repos": 9,
+    "owner_created": "2013",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "AucklandMuseum",
+    "public_repos": 16,
+    "owner_created": "2015",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "te-papa",
+    "public_repos": 8,
+    "owner_created": "2013",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "knreise",
+    "public_repos": 13,
+    "owner_created": "2013",
+    "owner_updated": "2015"
+  },
+  {
+    "owner_name": "nasjonalmuseet",
+    "public_repos": 5,
+    "owner_created": "2014",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "vesterheim",
+    "public_repos": 4,
+    "owner_created": "2013",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "nationalmuseum",
+    "public_repos": 5,
+    "owner_created": "2017",
+    "owner_updated": "2017"
+  },
+  {
+    "owner_name": "PolishHistoryMuseum",
+    "public_repos": 1,
+    "owner_created": "2010",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "SlovakNationalGallery",
+    "public_repos": 35,
+    "owner_created": "2014",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "kalmarlansmuseum",
+    "public_repos": 2,
+    "owner_created": "2015",
+    "owner_updated": "2017"
+  },
+  {
+    "owner_name": "lshSWE",
+    "public_repos": 1,
+    "owner_created": "2016",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "NationalmuseumSWE",
+    "public_repos": 3,
+    "owner_created": "2016",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "NordicMuseum",
+    "public_repos": 13,
+    "owner_created": "2016",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "riksantikvarieambetet",
+    "public_repos": 28,
+    "owner_created": "2017",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "Statens-maritima-museer",
+    "public_repos": 1,
+    "owner_created": "2014",
+    "owner_updated": "2014"
+  },
+  {
+    "owner_name": "museebolo",
+    "public_repos": 8,
+    "owner_created": "2018",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "swissnationalmuseum",
+    "public_repos": 1,
+    "owner_created": "2018",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "Limeishu",
+    "public_repos": 10,
+    "owner_created": "2016",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "africart",
+    "public_repos": 1,
+    "owner_created": "2019",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "AdlerPlanetarium",
+    "public_repos": 19,
+    "owner_created": "2012",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "american-art",
+    "public_repos": 25,
+    "owner_created": "2015",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "amnh",
+    "public_repos": 24,
+    "owner_created": "2013",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "ACMTX",
+    "public_repos": 1,
+    "owner_created": "2016",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "thewarholmuseum",
+    "public_repos": 5,
+    "owner_created": "2014",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "art-institute-of-chicago",
+    "public_repos": 27,
+    "owner_created": "2016",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "aum-vertnet",
+    "public_repos": 2,
+    "owner_created": "2014",
+    "owner_updated": "2015"
+  },
+  {
+    "owner_name": "autrymuseum",
+    "public_repos": 0,
+    "owner_created": "2015",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "balboaparkcollab",
+    "public_repos": 0,
+    "owner_created": "2015",
+    "owner_updated": "2015"
+  },
+  {
+    "owner_name": "blamcollective",
+    "public_repos": 3,
+    "owner_created": "2015",
+    "owner_updated": "2015"
+  },
+  {
+    "owner_name": "BarnesFoundation",
+    "public_repos": 11,
+    "owner_created": "2017",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "BNHM",
+    "public_repos": 9,
+    "owner_created": "2015",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "artsbma",
+    "public_repos": 1,
+    "owner_created": "2017",
+    "owner_updated": "2017"
+  },
+  {
+    "owner_name": "blanton-museum",
+    "public_repos": 0,
+    "owner_created": "2018",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "brooklynmuseum",
+    "public_repos": 7,
+    "owner_created": "2010",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "bsns-feedback",
+    "public_repos": 3,
+    "owner_created": "2017",
+    "owner_updated": "2017"
+  },
+  {
+    "owner_name": "cmoa",
+    "public_repos": 11,
+    "owner_created": "2012",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "cmnh",
+    "public_repos": 2,
+    "owner_created": "2014",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "cmhouston",
+    "public_repos": 3,
+    "owner_created": "2014",
+    "owner_updated": "2015"
+  },
+  {
+    "owner_name": "pittsburghkids",
+    "public_repos": 8,
+    "owner_created": "2015",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "camla",
+    "public_repos": 3,
+    "owner_created": "2014",
+    "owner_updated": "2014"
+  },
+  {
+    "owner_name": "ClevelandMuseumArt",
+    "public_repos": 3,
+    "owner_created": "2017",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "stillmuseum",
+    "public_repos": 0,
+    "owner_created": "2014",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "ColbyMuseum",
+    "public_repos": 15,
+    "owner_created": "2015",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "cpmab",
+    "public_repos": 1,
+    "owner_created": "2015",
+    "owner_updated": "2017"
+  },
+  {
+    "owner_name": "cooperhewitt",
+    "public_repos": 99,
+    "owner_created": "2010",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "CreativeDiscoveryMuseumMediaLab",
+    "public_repos": 1,
+    "owner_created": "2015",
+    "owner_updated": "2015"
+  },
+  {
+    "owner_name": "CurrentMuseum",
+    "public_repos": 2,
+    "owner_created": "2016",
+    "owner_updated": "2017"
+  },
+  {
+    "owner_name": "DenverArtMuseum",
+    "public_repos": 5,
+    "owner_created": "2014",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "DenverBotanicGardens",
+    "public_repos": 13,
+    "owner_created": "2015",
+    "owner_updated": "2015"
+  },
+  {
+    "owner_name": "digitalgamemuseum",
+    "public_repos": 2,
+    "owner_created": "2013",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "dcmgit",
+    "public_repos": 2,
+    "owner_created": "2013",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "IUAM",
+    "public_repos": 4,
+    "owner_created": "2016",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "Exploratorium",
+    "public_repos": 0,
+    "owner_created": "2012",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "fieldmuseum",
+    "public_repos": 14,
+    "owner_created": "2011",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "FWMSH",
+    "public_repos": 11,
+    "owner_created": "2016",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "FreerSackler",
+    "public_repos": 3,
+    "owner_created": "2014",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "CivilWarMuseum",
+    "public_repos": 0,
+    "owner_created": "2013",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "MuseumofHistory",
+    "public_repos": 0,
+    "owner_created": "2013",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "gettypubs",
+    "public_repos": 5,
+    "owner_created": "2014",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "HammerMuseum",
+    "public_repos": 0,
+    "owner_created": "2015",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "harvardartmuseums",
+    "public_repos": 48,
+    "owner_created": "2013",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "HighMuseum",
+    "public_repos": 0,
+    "owner_created": "2016",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "HistoricNE",
+    "public_repos": 0,
+    "owner_created": "2015",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "icamiami",
+    "public_repos": 0,
+    "owner_created": "2017",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "thegetty",
+    "public_repos": 42,
+    "owner_created": "2016",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "thejewishmuseum",
+    "public_repos": 0,
+    "owner_created": "2016",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "KimbellArt",
+    "public_repos": 0,
+    "owner_created": "2015",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "lbmaorg",
+    "public_repos": 2,
+    "owner_created": "2016",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "tenementmuseum",
+    "public_repos": 0,
+    "owner_created": "2014",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "LACMA",
+    "public_repos": 0,
+    "owner_created": "2017",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "maineminerals",
+    "public_repos": 6,
+    "owner_created": "2015",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "marinersmuseum",
+    "public_repos": 7,
+    "owner_created": "2014",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "metmuseum-medialab",
+    "public_repos": 40,
+    "owner_created": "2012",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "MetMuseumofArt",
+    "public_repos": 0,
+    "owner_created": "2013",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "artsmia",
+    "public_repos": 75,
+    "owner_created": "2013",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "mitmuseumstudio",
+    "public_repos": 1,
+    "owner_created": "2015",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "monticello-railway-museum",
+    "public_repos": 4,
+    "owner_created": "2014",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "MortonArb-ForestEcology",
+    "public_repos": 23,
+    "owner_created": "2017",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "Museum-of-Art-and-Digital-Entertainment",
+    "public_repos": 5,
+    "owner_created": "2016",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "museumofthebible",
+    "public_repos": 5,
+    "owner_created": "2015",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "mfaweb",
+    "public_repos": 0,
+    "owner_created": "2015",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "mfahouston",
+    "public_repos": 5,
+    "owner_created": "2017",
+    "owner_updated": "2017"
+  },
+  {
+    "owner_name": "mjh-nyc",
+    "public_repos": 6,
+    "owner_created": "2017",
+    "owner_updated": "2017"
+  },
+  {
+    "owner_name": "lifeandscience",
+    "public_repos": 15,
+    "owner_created": "2011",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "mattressfactory",
+    "public_repos": 0,
+    "owner_created": "2012",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "MuseumofModernArt",
+    "public_repos": 6,
+    "owner_created": "2015",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "mosboston",
+    "public_repos": 14,
+    "owner_created": "2012",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "museum-of-vertebrate-zoology",
+    "public_repos": 9,
+    "owner_created": "2013",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "NationalGalleryOfArt",
+    "public_repos": 4,
+    "owner_created": "2018",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "momath",
+    "public_repos": 4,
+    "owner_created": "2017",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "ns11mm",
+    "public_repos": 2,
+    "owner_created": "2011",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "nationalveteransartmuseum",
+    "public_repos": 0,
+    "owner_created": "2017",
+    "owner_updated": "2017"
+  },
+  {
+    "owner_name": "NYSMuseum",
+    "public_repos": 2,
+    "owner_created": "2016",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "IMAmuseum",
+    "public_repos": 42,
+    "owner_created": "2011",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "pmns",
+    "public_repos": 1,
+    "owner_created": "2016",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "philamuseum",
+    "public_repos": 6,
+    "owner_created": "2016",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "PortlandArtMuseum",
+    "public_repos": 3,
+    "owner_created": "2015",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "Princeton-University-Art-Museum",
+    "public_repos": 2,
+    "owner_created": "2017",
+    "owner_updated": "2017"
+  },
+  {
+    "owner_name": "rubinmusuem",
+    "public_repos": 1,
+    "owner_created": "2016",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "SaintLouisArtMuseum",
+    "public_repos": 0,
+    "owner_created": "2017",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "sfmoma",
+    "public_repos": 10,
+    "owner_created": "2011",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "scimusmn",
+    "public_repos": 193,
+    "owner_created": "2011",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "SheddAquarium",
+    "public_repos": 1,
+    "owner_created": "2018",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "Smithsonian",
+    "public_repos": 110,
+    "owner_created": "2013",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "NMAAHC",
+    "public_repos": 7,
+    "owner_created": "2015",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "Guggenheim",
+    "public_repos": 3,
+    "owner_created": "2012",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "studiomuseum",
+    "public_repos": 0,
+    "owner_created": "2015",
+    "owner_updated": "2017"
+  },
+  {
+    "owner_name": "CMP-Studio",
+    "public_repos": 50,
+    "owner_created": "2015",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "usnationalarchives",
+    "public_repos": 33,
+    "owner_created": "2011",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "VMNH",
+    "public_repos": 0,
+    "owner_created": "2015",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "VizcayaMuseum",
+    "public_repos": 9,
+    "owner_created": "2017",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "walkerart",
+    "public_repos": 30,
+    "owner_created": "2012",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "WaltersArtMuseum",
+    "public_repos": 12,
+    "owner_created": "2013",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "whalemuseum",
+    "public_repos": 0,
+    "owner_created": "2012",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "whitneymuseum",
+    "public_repos": 1,
+    "owner_created": "2011",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "wcmaart",
+    "public_repos": 12,
+    "owner_created": "2017",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "ycba-cia",
+    "public_repos": 10,
+    "owner_created": "2014",
+    "owner_updated": "2017"
+  },
+  {
+    "owner_name": "BritishMuseum",
+    "public_repos": 19,
+    "owner_created": "2015",
+    "owner_updated": "2018"
+  },
+  {
+    "owner_name": "geffrye",
+    "public_repos": 1,
+    "owner_created": "2014",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "NaturalHistoryMuseum",
+    "public_repos": 130,
+    "owner_created": "2013",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "RBGKew",
+    "public_repos": 26,
+    "owner_created": "2014",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "TheScienceMuseum",
+    "public_repos": 11,
+    "owner_created": "2016",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "tategallery",
+    "public_repos": 1,
+    "owner_created": "2013",
+    "owner_updated": "2016"
+  },
+  {
+    "owner_name": "vanda",
+    "public_repos": 26,
+    "owner_created": "2010",
+    "owner_updated": "2019"
+  },
+  {
+    "owner_name": "wellcometrust",
+    "public_repos": 113,
+    "owner_created": "2012",
+    "owner_updated": "2018"
+  }
+]

@@ -19,6 +19,22 @@ USERS=($(sed -n 's/.*-[ ]\(.*\).*/\1/p' data/museums.yml))
 
 mkdir bin/temp
 
+# Loop through list of users, make call to GitHub API
+# construct new JSON object with information on those users,
+# and output to standalone JSON files
+NOW=$(date +%F)
+
+for i in "${USERS[@]}"
+do
+
+  curl -H 'Authorization: token '$TOKEN'' "https://api.github.com/users/$i" | jq '. | {
+    owner_name: .login,
+    public_repos: .public_repos,
+    owner_created: (.created_at | fromdateiso8601 | strftime("%Y") ),
+    owner_updated: (.updated_at | fromdateiso8601 | strftime("%Y") ) }' >> bin/temp/OWNERS.txt
+  jq -s '[ .[] ]' bin/temp/OWNERS.txt | tee data/museums.json data/archive/museums-$NOW.json
+
+done
 
 # Loop through list of users, make call to GitHub API
 # construct new JSON object with the needed information,

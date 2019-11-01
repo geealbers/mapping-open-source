@@ -6,10 +6,18 @@
     <description>Recent content on Mapping Open Source in Museums</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://geealbers.github.io/mapping-open-source/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mapping Open Source in Museums</title>
+      <link>https://geealbers.github.io/mapping-open-source/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geealbers.github.io/mapping-open-source/</guid>
+      <description>Welcome to the Mapping Open Source in Museums project. This is an effort to understand the use and creation of open source code within the museum community. The project focuses specifically on exploring code written by museums and used by other museums, rather than on museums’ use of other open source projects. The visualizations and data shown on this site are pulled from GitHub’s API based on the identified museum GitHub accounts listed below.</description>
+    </item>
     
     <item>
       <title>Bar Chart</title>
@@ -45,15 +53,6 @@
       
       <guid>https://geealbers.github.io/mapping-open-source/network/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Bar Chart</title>
-      <link>https://geealbers.github.io/mapping-open-source/</link>
-      <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://geealbers.github.io/mapping-open-source/</guid>
-      <description>Welcome to the Mapping Open Source in Museums project. This is an effort to understand the use and creation of open source code within the museum community. The project focuses specifically on exploring code written by museums and used by other museums, rather than on museums’ use of other open source projects. The visualizations and data shown on this site are pulled from GitHub’s API based on the identified museum GitHub accounts listed below.</description>
     </item>
     
     <item>

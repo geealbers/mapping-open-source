@@ -18,6 +18,7 @@ USERS=($(sed -n 's/.*-[ ]\(.*\).*/\1/p' data/museums.yml))
 # will be automatically deleted at the end
 
 mkdir bin/temp
+mkdir bin/filechecks
 
 # Loop through list of users, make call to GitHub API
 # construct new JSON object with information on those users,
@@ -99,6 +100,24 @@ do
     name_full: $repo,
     contributor_count: (length),
     contributor: [.[] | {name: .login, contributions: .contributions}]}' >> bin/temp/NAMES.txt
+
+done
+
+
+# Script to check GitHub repos for a key file like CONTRIBUTING.md
+# and if present in the repo, to add the repo name to a text list.
+# Can be modified and repeated for other files like LICENSE.md,
+# CODE_OF_CONDUCT.md and SUPPORT.md
+for i in "${REPO_NAMES[@]}"
+
+do
+
+  x=$(curl https://raw.githubusercontent.com/$i/master/CONTRIBUTING.md)
+
+  if [ "$x" != "404: Not Found" ]
+  then 
+  echo "$i" >> bin/filechecks/HAS_CONTRIBUTING.md
+  fi
 
 done
 

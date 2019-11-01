@@ -33,7 +33,7 @@ do
     public_repos: .public_repos,
     owner_created: (.created_at | fromdateiso8601 | strftime("%Y") ),
     owner_updated: (.updated_at | fromdateiso8601 | strftime("%Y") ) }' >> bin/temp/OWNERS.txt
-  jq -s '[ .[] ]' bin/temp/OWNERS.txt | tee data/museums.json data/archive/museums-$NOW.json
+  jq -s '[ .[] ]' bin/temp/OWNERS.txt | tee data/owners.json data/archive/owners-$NOW.json
 
 done
 

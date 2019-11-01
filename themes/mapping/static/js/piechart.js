@@ -4,7 +4,7 @@ var radius = 300;
 var legend = 200;
 var width = radius * 2;
 var donutWidth = radius * .8;
-var legendRectSize = 18;
+var legendRectSize = 28;
 var legendSpacing = 8;
 
 var colores = randomColor({
@@ -30,7 +30,7 @@ var piechart = d3.select('#pie-container')
 var legend = d3.select('#pie-container')
   .append('svg')
   .attr('id', 'legend')
-  .attr('height', width * 6 )
+  .attr('height', width * 9 )
   .attr('style', '; margin-top:' + (legendRectSize) + ';')
   .append('g');
 

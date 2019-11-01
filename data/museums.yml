@@ -16,6 +16,7 @@ Canada:
   - UBCBBMCTC
   - uamz-vertnet
   - humanrights
+  - McqOrg
   - mus-nature-ca
   - ROMtoronto
 
@@ -26,6 +27,11 @@ Denmark:
 Finland:
   - FinnishNationalGallery
 
+France: 
+  - ina-foss
+  - museedelairetdelespace
+  - rmngp
+  
 Germany:
   - deutsche-kinemathek
   - MuseumBINARIUM
@@ -40,6 +46,11 @@ Hungary:
 
 Israel:
   - Beit-Hatfutsot
+  
+Netherlands:
+  - gemeentemuseum
+  - naturalis
+  - Rijksmuseum
 
 New Zealand:
   - AucklandMuseum
@@ -64,6 +75,16 @@ Sweden:
   - NordicMuseum
   - riksantikvarieambetet
   - Statens-maritima-museer
+  
+Switzerland:
+  - museebolo
+  - swissnationalmuseum
+  
+Taiwan:
+  - Limeishu
+  
+Togo:
+  - africart
 
 United States:
   - AdlerPlanetarium
@@ -138,6 +159,7 @@ United States:
   - mosboston
   - museum-of-vertebrate-zoology
   - NationalGalleryOfArt
+  - momath
   - ns11mm
   - nationalveteransartmuseum
   - NYSMuseum

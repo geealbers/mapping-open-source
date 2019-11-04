@@ -1,9 +1,8 @@
 ---
-title: Bar Chart
+title: Mapping Open Source in Museums
 type: page
 layout: about
-weight: 50
-slug: .
+weight: 1
 ---
 
 Welcome to the *Mapping Open Source in Museums* project. This is an effort to understand the use and creation of open source code within the museum community. The project focuses specifically on exploring code written by museums and used by other museums, rather than on museums’ use of other open source projects. The visualizations and data shown on this site are pulled from GitHub’s API based on the identified museum GitHub accounts listed below. For now, the accounts are limited strictly to those connected directly to a museum, though in the future should be expanded to include external vendors and firms who do work on behalf of museums.

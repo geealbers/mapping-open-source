@@ -2,6 +2,7 @@
 
 Australia:
   - ACMILabs
+  - austmus
   - museumofappliedartsandsciences
   - MuseumOfContemporaryArtAUSTRALIA
   - museumofoldandnewart
@@ -12,6 +13,10 @@ Australia:
   - rbgvictoria
   - wamuseum
 
+Belgium:
+  - DesignMuseumGent
+  - S-M-A-K-Gent
+
 Canada:
   - UBCBBMCTC
   - uamz-vertnet
@@ -20,18 +25,22 @@ Canada:
   - mus-nature-ca
   - ROMtoronto
 
+China:
+  - X-Museum
+
 Denmark:
   - NationalMuseumofDenmark
+  - NHMDenmark
   - StatensMuseumforKunst
 
 Finland:
   - FinnishNationalGallery
 
-France: 
+France:
   - ina-foss
   - museedelairetdelespace
   - rmngp
-  
+
 Germany:
   - deutsche-kinemathek
   - MuseumBINARIUM
@@ -47,7 +56,7 @@ Hungary:
 
 Israel:
   - Beit-Hatfutsot
-  
+
 Netherlands:
   - gemeentemuseum
   - naturalis
@@ -59,6 +68,7 @@ New Zealand:
 
 Norway:
   - knreise
+  - Munchmuseet
   - nasjonalmuseet
   - vesterheim
 
@@ -66,29 +76,34 @@ Poland:
   - nationalmuseum
   - PolishHistoryMuseum
 
+Russia:
+  - polytech-museum
+
 Slovakia:
   - SlovakNationalGallery
 
 Sweden:
+  - halsinglands
   - kalmarlansmuseum
   - lshSWE
   - NationalmuseumSWE
   - NordicMuseum
   - riksantikvarieambetet
   - Statens-maritima-museer
-  
+
 Switzerland:
   - museebolo
   - swissnationalmuseum
-  
+
 Taiwan:
   - Limeishu
-  
+
 Togo:
   - africart
 
 United States:
   - AdlerPlanetarium
+  - akronartmuseum
   - american-art
   - amnh
   - ACMTX
@@ -100,6 +115,7 @@ United States:
   - blamcollective
   - barnesfoundation
   - BNHM
+  - Bowers-Museum
   - artsbma
   - blanton-museum
   - brooklynmuseum
@@ -113,6 +129,7 @@ United States:
   - stillmuseum
   - ColbyMuseum
   - cpmab
+  - The-Conny
   - cooperhewitt
   - CreativeDiscoveryMuseumMediaLab
   - TheCubanMuseum
@@ -165,6 +182,7 @@ United States:
   - nationalveteransartmuseum
   - NYSMuseum
   - IMAmuseum
+  - PASMF
   - pmns
   - philamuseum
   - PortlandArtMuseum
@@ -178,8 +196,10 @@ United States:
   - NMAAHC
   - Guggenheim
   - studiomuseum
+  - svmoa
   - CMP-Studio
   - usnationalarchives
+  - UNSMVertNet
   - VMNH
   - VizcayaMuseum
   - walkerart
@@ -191,10 +211,13 @@ United States:
 
 United Kingdom:
   - BritishMuseum
+  - BritishMuseumDH
+  - FitzwilliamMuseum
   - geffrye
   - NaturalHistoryMuseum
   - RBGKew
   - thesciencemuseum
   - tategallery
+  - UniversityofCambridgeMuseums
   - vanda
   - wellcometrust

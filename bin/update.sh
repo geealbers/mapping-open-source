@@ -9,9 +9,9 @@
 TOKEN=add-your-github-token-here
 
 
-# Grab all museum user names from the data/museums.yml file
+# Grab all museum user names from the data/orgs.yml file
 
-USERS=($(sed -n 's/.*-[ ]\(.*\).*/\1/p' data/museums.yml))
+USERS=($(sed -n 's/.*-[ ]\(.*\).*/\1/p' data/orgs.yml))
 
 
 # Make a temporary directory to stash script working files
@@ -115,7 +115,7 @@ do
   x=$(curl https://raw.githubusercontent.com/$i/master/CONTRIBUTING.md)
 
   if [ "$x" != "404: Not Found" ]
-  then 
+  then
   echo "$i" >> bin/filechecks/HAS_CONTRIBUTING.md
   fi
 

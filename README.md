@@ -2,7 +2,7 @@
 
 **See the site!** 💘💫🦄 --> https://geealbers.github.io/mapping-open-source/
 
-Welcome to the *Mapping Open Source in Museums* project. This is an effort to understand the use and creation of open source code within the museum community. The project focuses specifically on exploring code written by museums and used by other museums, rather than on museums’ use of other open source projects. The visualizations and data shown on this site are pulled from GitHub’s API based on [a running list](data/museums.yml) of identified museum GitHub accounts. For now, the accounts are limited strictly to those connected directly to a museum, though in the future should be expanded to include external vendors and firms who do work on behalf of museums.
+Welcome to the *Mapping Open Source in Museums* project. This is an effort to understand the use and creation of open source code within the museum community. The project focuses specifically on exploring code written by museums and used by other museums, rather than on museums’ use of other open source projects. The visualizations and data shown on this site are pulled from GitHub’s API based on [a running list](data/orgs.yml) of identified museum GitHub accounts. For now, the accounts are limited strictly to those connected directly to a museum, though in the future should be expanded to include external vendors and firms who do work on behalf of museums.
 
 This project was sparked by [a brief Twitter conversation](https://twitter.com/danamuses/status/987411673496498177) in the spring of 2018, and is built in the footsteps of MuseTech Central ([original web version](https://web.archive.org/web/20121130230106/http://musetechcentral.org/), and [GitHub reincarnation](https://github.com/MuseCompNet/muse-tech-central/)), and [Museums on GitHub](https://github.com/Ambrosiani/museums-on-github). This site itself is built on [Hugo](https://github.com/gohugoio/hugo), and uses [D3](https://github.com/d3/d3) for many of the visualizations.
 
@@ -11,7 +11,7 @@ This project was sparked by [a brief Twitter conversation](https://twitter.com/d
 1. Clone the repo to your computer
 2. Download the Hugo ([v0.53.0](https://github.com/gohugoio/hugo/releases/tag/v0.53)) and jq ([v1.6](https://stedolan.github.io/jq/download/)) binaries for Mac and add them to your `/usr/local/bin` folder
 3. Create a [GitUb Personal Access Token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token) and add it to line 9 of `bin/update.sh`
-4. Add any new museums to the list in `data/museums.yml`
+4. Add any new museums to the list in `data/orgs.yml`
 5. Run `bin/update.sh` (this takes awhile)
 6. Run `hugo serve` to see the site preview at http://localhost:1313/mapping-open-source/
 
@@ -33,7 +33,7 @@ Second, in `themes/mapping/static/js/barchart.js` you will need to update the li
 
 ### Using this Repo as the Basis of Your Own Project
 
-This repo could also be used to visualize and present other groups of GitHub users or organizations. You can update the list at `data/museums.yml` to include any type of account from any sector you would like. You can organize them with different categories, as we’ve used countries here, or no categories at all. (The categories will show up on the home page of the project.)
+This repo could also be used to visualize and present other groups of GitHub users or organizations. You can update the list at `data/orgs.yml` to include any type of account from any sector you would like. You can organize them with different categories, as we’ve used countries here, or no categories at all. (The categories will show up on the home page of the project.)
 
 Also then update the Markdwon-formatted text in `content/_index.md` for your homepage, and the title and URL for your site in `config.yml`.
 

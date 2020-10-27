@@ -1,4 +1,4 @@
-{{ range $key, $value :=  $.Site.Data.museums }}
+{{ range $key, $value :=  $.Site.Data.orgs }}
     <h3>{{ $key }}</h3>
     <ul>
     {{ range $value }}
